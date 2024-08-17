@@ -1,0 +1,341 @@
+.alarme {
+    margin-bottom: -200px;
+  }
+  .overlay-section-alarme-type {
+    /* min-height: 100vh; */
+
+    overflow: hidden;
+    /* max-height: 650px; */
+    position: relative;
+    top: -100px;
+
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+
+    /* padding: 50px; */
+    background-color: var(--palette_jaune);
+
+    padding:50px 50px 100px 50px;
+}
+
+.overlay-section-alarme-ulc {
+    /* min-height: 100vh; */
+
+    overflow: hidden;
+    /* max-height: 650px; */
+    position: relative;
+    top: -150px;
+
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display:flex;
+    flex-direction: column;
+
+    /* padding: 50px; */
+    background-color: var(--palette_bleu);
+
+    padding:50px 50px 100px 50px;
+}
+
+.overlay-section-alarme-siemens {
+    /* min-height: 100vh; */
+
+    overflow: hidden;
+    /* max-height: 650px; */
+    position: relative;
+    top: -200px;
+
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display:flex;
+    flex-direction: column;
+
+    /* padding: 50px; */
+    background-color: var(--palette_gris);
+
+    padding:50px;
+}
+
+.siemens-titre{
+    font-size: 20pt;
+}
+
+.siemens-sous-titre{
+    font-size:15pt;
+    font-weight: bold;
+}
+
+.siemens-margin-top{
+    margin-top:auto;
+}
+.overlay-section-alarme-siemens * {
+    color:var(--palette_bleu);
+}
+
+.siemens-stats{
+
+    display:flex;
+    flex-direction:column;
+    row-gap:5px;
+    padding:10px;
+    border-radius:10px;
+    border-width:0.5px;
+    border-style:solid;
+    border-color:var(--palette_bleu);
+
+width: fit-content;
+}
+
+.siemens-stats-verbe{
+    text-align:center;
+}
+
+.conteneur-siemens-stats{
+    display:flex;
+    column-gap:10px;
+    row-gap:10px;
+    flex-wrap:wrap;
+}
+
+.conteneur-siemens{
+    display:flex;
+    flex-direction:row;
+}
+
+.conteneur-siemens div{
+    /* flex:1; */
+}
+
+.conteneur-texte-siemens{
+    flex:1;
+
+    display:flex;
+    flex-direction: column;
+    row-gap:15px;
+}
+
+.conteneur-image-siemens{
+    flex:1;
+}
+.conteneur-image-siemens>img{
+    max-width:100%;
+}
+
+.conteneur-types{
+    display:flex;
+    flex-wrap:wrap;
+
+    row-gap:25px;
+    column-gap:25px;
+}
+.conteneur-types>div{
+    flex:1;
+    background-color: var(--palette_bleu);
+    border-radius:25px;
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    row-gap:25px;
+}
+
+.types-titres{
+    font-size:20pt;
+    font-weight:300;
+}
+.conteneur-types>div>svg{
+    width:125px;
+    height:125px;
+    margin-left:auto;
+    margin-right:auto;
+}
+  .overlay-section-alarme {
+    position: relative;
+    top: -50px;
+  
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding:50px 50px 100px 50px;
+    background-color: var(--palette_gris);
+
+
+  }
+
+  .overlay-section-alarme div,.overlay-section-alarme p,.overlay-section-alarme h2 {
+    color: var(--palette_bleu);
+    }
+
+
+
+    .inner-texte-alarme p{
+        font-size:15pt;
+    }
+
+    .inner-texte-alarme h2{
+        font-size:20pt;
+        font-weight: bold;
+    }
+
+    .inner-texte-alarme{
+
+        flex:4;
+        display:flex;
+        flex-direction:column;
+    
+        row-gap: 15px;
+        padding:0 50px 0 50px;
+    }
+
+    .svgs-alarme>svg{
+        width:150px;
+        height:150px;
+    }
+
+    .overlay-section-alarme-ulc>h1{
+        font-size:35pt;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom:50px;
+    }
+
+    .conteneur-normes-ulc{
+        display:flex;
+        flex-direction:column;
+        row-gap:25px;
+    }
+
+    .conteneur-normes-ulc>div{
+        flex:1;
+    }
+
+    .ulc-536-bg{
+        background-color: #3C4470;
+        margin-right:50px;
+        padding:50px;
+        border-radius:25px;
+
+        display:flex;
+        flex-direction: column;
+        row-gap:25px;
+    }
+
+    .ulc-537-bg{
+        margin-left:25px;
+        margin-right:25px;
+        background-color: #7B809C;
+        padding:50px;
+        border-radius:25px;
+
+        display:flex;
+        flex-direction: column;
+        row-gap:25px;
+    }
+
+    .ulc-nfpa-bg{
+        background-color: #D1D2D9;
+        margin-left:50px;
+        padding:50px;
+        border-radius:25px;
+
+        display:flex;
+        flex-direction: column;
+        row-gap:25px;
+    }
+
+    .ulc-nfpa-bg>h3{
+        color:var(--palette_bleu);
+    
+    }
+
+    .ulc-536-bg>h3, .ulc-537-bg>h3, .ulc-nfpa-bg>h3{
+        text-align:center;
+        font-size:20pt;
+        font-weight: bold;
+    }
+    .ulc-536,.ulc-537,.ulc-nfpa{
+        display:flex;
+
+        column-gap:25px;
+    }
+
+    .ulc-536>p,.ulc-537>p,.ulc-nfpa>p{
+        font-size:15pt;
+    }
+
+    .ulc-nfpa>p{
+        color:var(--palette_bleu);
+    }
+    @media screen and (max-width: 963px) {
+        .svgs-alarme{
+            display:none;
+        }
+
+        .inner-texte-alarme{
+            padding:unset;
+        }
+
+        .overlay-section-alarme{
+            padding:25px 25px 50px 25px;
+        }
+
+        .overlay-section-alarme-ulc{
+            padding:25px 25px 100px 25px;
+        }
+
+        .overlay-section-alarme-type{
+            padding: 25px 25px 100px 25px;
+        }
+
+        .ulc-536,.ulc-537,.ulc-nfpa{
+            /* padding:25px; */
+            display:flex;
+            flex-direction:column;
+            border-radius:25px;
+    
+            row-gap:25px;
+        }
+    
+        .ulc-536>div>svg,.ulc-537>div>svg, .ulc-nfpa>div>svg{
+            display:Flex;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .ulc-536>p,.ulc-537>p,.ulc-nfpa>p{
+            font-size:12pt;
+        }
+    
+        .ulc-nfpa>p{
+            color:var(--palette_bleu);
+        }
+
+        .ulc-536-bg, .ulc-537-bg, .ulc-nfpa-bg{
+            padding:25px;
+        }
+        .ulc-536-bg{
+            background-color: #3C4470;
+            margin:unset;
+        }
+    
+        .ulc-537-bg{
+            background-color: #7B809C;
+            margin:unset;
+        }
+    
+        .ulc-nfpa-bg{
+            background-color: #D1D2D9;
+            margin:unset;
+        }
+
+        .conteneur-siemens{
+            flex-direction:column;
+        }
+
+        
+        .overlay-section-alarme-siemens{
+            padding:25px 25px 50px 25px;
+        }
+    }

@@ -1,0 +1,243 @@
+.choix_langue_en,
+.choix_langue_fr {
+  cursor: pointer;
+}
+.nav li {
+  align-items: center;
+  /* text-transform:uppercase; */
+  display: flex;
+  column-gap: var(--padding_court);
+  justify-content: center;
+}
+
+.nav li a {
+  text-decoration: none;
+}
+
+.langue {
+  background-color: var(--palette_charcoal);
+  /* padding-left: 25px; */
+}
+
+.nav-wrapper {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--palette_noir);
+  z-index: 10;
+}
+
+.overlay-border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 75px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  /* color:white; */
+}
+
+.overlay-fade {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 0) 0%,
+    rgba(0, 0, 0, 0.5018382352941176) 100%
+  );
+}
+.navbar {
+  /*OVERLAY POUR IMAGE HERO*/
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  /*----------------------*/
+  display: flex;
+  align-items: center;
+  height: 75px;
+  overflow: hidden;
+  background-color: var(--palette_charcoal);
+}
+
+.navbar ul {
+  background-color: var(--palette_charcoal);
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  column-gap: 25px;
+  width: 100%;
+}
+
+.navbar ul > li:last-child {
+  /* margin-right: 25px; */
+}
+
+.nav-item {
+  color: var(--palette_blanc);
+  font-size: var(--font_size_nav);
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+.nav-item:hover {
+  color: var(--couleur_accent);
+}
+
+.menu-toggle .bar {
+  width: 40px;
+  height: 5px;
+  background-color: var(--palette_gris);
+  margin: 10px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  margin-left: auto;
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+.active {
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--palette_jaune);
+  border-radius: 25px;
+}
+
+.active-nav {
+  color: #fff;
+}
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  -webkit-transform: translateY(15px) rotate(45deg);
+  -ms-transform: translateY(15px) rotate(45deg);
+  -o-transform: translateY(15px) rotate(45deg);
+  transform: translateY(15px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  -webkit-transform: translateY(-15px) rotate(-45deg);
+  -ms-transform: translateY(-15px) rotate(-45deg);
+  -o-transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+.overflow_hidden {
+  overflow: hidden !important;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.langue {
+  margin-right: auto;
+}
+
+.overflow_y_hidden {
+  overflow-y: hidden;
+}
+
+.nav-item > a {
+  color: rgb(163, 163, 163); /* Default color for inactive items */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-item > a:hover {
+  color: #fff; /* Brighter color for the active item */
+  transform: scale(1.1);
+  transition-duration: 1;
+}
+
+.nav-item > a.active-nav {
+  color: #fff;
+}
+
+@media screen and (max-width: 963px) {
+  .navbar-logo svg {
+    display: none;
+  }
+  .navbar {
+    position: absolute;
+
+    z-index: 5 !important;
+  }
+
+  .dark_mode {
+    padding-left: 0px;
+  }
+
+  .navbar ul {
+    display: none;
+    transform: translateX(-100%);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    cursor: pointer;
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+  .navbar li {
+    padding: 15px;
+  }
+
+  .navbar li:first-child {
+    margin-top: auto;
+    align-self: center;
+  }
+
+  .navbar .langue {
+    margin-right: unset;
+  }
+
+  .menu-toggle,
+  .bar {
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .navbar ul > li:last-child {
+    margin-right: unset;
+    margin-bottom: auto;
+  }
+
+  .mobile-nav {
+    /* transform: translateX(0%) !important; */
+    transform: translateX(0%) !important;
+  }
+}

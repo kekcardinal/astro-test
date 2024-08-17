@@ -1,0 +1,144 @@
+.projets {
+  margin-bottom: -50px;
+}
+
+.projet p {
+  color: var(--palette_bleu);
+}
+.projets-listing {
+}
+
+.overlay-section-projets {
+  position: relative;
+  top: -50px;
+
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  background-color: var(--palette_gris);
+}
+
+.overlay-section-projets div {
+  color: var(--palette_bleu);
+}
+
+.titre-projets {
+  color: var(--palette_bleu);
+  padding-bottom: 25px;
+}
+
+.conteneur-filtre {
+  display: flex;
+  row-gap: 5px;
+  column-gap: 5px;
+  flex-wrap: wrap;
+}
+.btn-filtre-projets {
+  display: flex;
+  color: var(--palette_bleu);
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  margin-top: auto;
+  /* margin-bottom: 50px; */
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--palette_bleu);
+  text-align: center;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.btn-filtre-projets.active {
+  border-style: none;
+  background-color: var(--palette_jaune);
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 18pt;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.button {
+  padding-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  font-size: 35pt;
+}
+
+.titre-building {
+  margin-right: auto;
+}
+.inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.conteneur-img-building-landscape {
+  flex: 3;
+  height: 500px;
+}
+
+.conteneur-img-building-portrait {
+  flex: 1;
+  /* height:500px; */
+}
+.img-building {
+  /* width:100%; */
+  object-fit: contain;
+  width: 100%;
+  /* height:100%; */
+}
+
+.conteneur_projet_texte_landscape {
+  flex: 1;
+  padding-left: 25px;
+}
+
+.conteneur_projet_texte_portrait {
+  flex: 3;
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 963px) {
+  .titre-building {
+    font-size: 25px;
+  }
+
+  .button {
+    font-size: 25px;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .conteneur_projet_texte_landscape > p,
+  .conteneur_projet_texte_portrait > p {
+    font-size: 20px;
+  }
+
+  .conteneur_projet_texte_landscape,
+  .conteneur_projet_texte_portrait {
+    padding: 0px;
+  }
+
+  .overlay-section-projets {
+    padding: 25px;
+  }
+}

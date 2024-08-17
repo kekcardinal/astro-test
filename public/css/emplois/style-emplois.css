@@ -1,0 +1,108 @@
+.overlay-section-emplois-page {
+  position: relative;
+  top: -50px;
+
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 50px 50px 100px 50px;
+  background-color: var(--palette_gris);
+}
+
+.emplois {
+  margin-bottom: -50px;
+}
+
+.inner-texte-emplois {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 15px;
+}
+
+.conteneur-emplois-tags {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.emplois-tags {
+  background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.overlay-section-emplois-page * {
+  color: var(--palette_bleu);
+}
+
+.emplois-listing-responsabilites {
+  box-sizing: border-box;
+}
+.emplois-listing-responsabilites {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  list-style: none; /* Remove default markers */
+  padding-left: 0; /* Remove default padding */
+}
+
+.emplois-listing-responsabilites li {
+  position: relative;
+  padding-left: 15px; /* Add space for the marker */
+}
+
+.emplois-listing-responsabilites li::before {
+  content: "•"; /* Use a bullet point as the marker */
+  color: var(--palette_bleu); /* Set the marker color */
+  position: absolute;
+  left: 0;
+}
+
+.emplois-appliquer {
+  background-color: var(--palette_jaune);
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+
+  text-decoration: none;
+}
+
+.nombres-des-postes {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 963px) {
+  .nombres-des-postes {
+    font-size: 15px;
+  }
+
+  .emplois-tags {
+    font-size: 15px;
+  }
+
+  .sous-titre-emplois-embauche {
+    font-size: 20px;
+  }
+
+  .description-emplois-embauche {
+    font-size: 15px;
+  }
+
+  .titre-emplois-responsabilite {
+    font-size: 20px;
+  }
+
+  .emplois-listing-responsabilites li {
+    font-size: 15px;
+  }
+
+  .emplois-appliquer {
+    background-color: var(--palette_jaune);
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 15px;
+    text-decoration: none;
+  }
+}
