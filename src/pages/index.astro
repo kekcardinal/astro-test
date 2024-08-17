@@ -1,0 +1,12 @@
+---
+// Import the layout
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<!-- Use the layout and pass content into the slot -->
+<BaseLayout>
+	<Hero imageUrl="/images/capybara.jpg" altText="About Page Hero" />
+    <h2>Welcome to My Site</h2>
+    <p>This is the homepage.</p>
+</BaseLayout>
