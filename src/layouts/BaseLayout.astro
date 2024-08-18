@@ -2,6 +2,8 @@
 // Import the components
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
+
+const { mainClass = '' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ import Footer from '../components/footer.astro';
     <Header />
 
     <!-- Slot for the page content -->
-    <main>
+    <main class={mainClass}>
         <slot />
     </main>
 
