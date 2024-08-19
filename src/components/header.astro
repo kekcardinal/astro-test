@@ -1,6 +1,6 @@
 ---
-import navitem from '../components/navitem.astro';
-import langageswitcher from '../components/langageswitcher.astro';
+import NavItem from '../components/NavItem.astro';
+import LangageSwitcher from '../components/LangageSwitcher.astro';
 
 const { currentPath } = Astro.props;
 ---
@@ -51,30 +51,30 @@ const { currentPath } = Astro.props;
             </svg>
           </a>
           </li>
-          <langageswitcher />
+          <LangageSwitcher />
     <li>
-      <navitem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
-      <navitem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
+      <NavItem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
+      <NavItem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
     </li>
     <li>
-      <navitem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
-      <navitem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
+      <NavItem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
+      <NavItem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
     </li>
     <li>
-      <navitem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
-      <navitem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
+      <NavItem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
+      <NavItem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
     </li>
     <li>
-      <navitem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
-      <navitem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
+      <NavItem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
+      <NavItem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
     </li>
     <li>
-      <navitem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
-      <navitem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
+      <NavItem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
+      <NavItem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
     </li>
     <li class="nav-dernier">
-      <navitem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
-      <navitem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <NavItem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <NavItem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
     </li>
         </ul>
       </div>
