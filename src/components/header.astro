@@ -54,6 +54,7 @@ const { currentPath, active=false } = Astro.props;
           </li>
 
           <li>
+            <div>{currentPath}</div>
             <div lang="fr" data-index="1" class="nav-item "><a class={currentPath === "/alarme" ? 'active-nav' : ''} href="/alarme">Alarme incendie</a></div>
             <div lang="en" data-index="1" class="nav-item"><a class={currentPath === "/alarme" ? 'active-nav' : ''} href="/alarme">Fire protection</a></div>
           </li>
