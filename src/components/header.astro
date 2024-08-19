@@ -1,6 +1,6 @@
 ---
 import NavItem from '../components/NavItem.astro';
-import LanguageSwitcher from '../components/LangageSwitcher.astro';
+import LangageSwitcher from '../components/LangageSwitcher.astro';
 
 const { currentPath } = Astro.props;
 ---
@@ -51,7 +51,7 @@ const { currentPath } = Astro.props;
             </svg>
           </a>
           </li>
-          <LanguageSwitcher />
+          <LangageSwitcher />
     <li>
       <NavItem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
       <NavItem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
