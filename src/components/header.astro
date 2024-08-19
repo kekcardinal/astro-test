@@ -1,5 +1,5 @@
 ---
-import NavItem from '../components/NavItem.astro';
+import navitem from '../components/navitem.astro';
 import LangageSwitcher from '../components/LangageSwitcher.astro';
 
 const { currentPath } = Astro.props;
@@ -53,28 +53,28 @@ const { currentPath } = Astro.props;
           </li>
           <LangageSwitcher />
     <li>
-      <NavItem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
-      <NavItem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
+      <navitem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
+      <navitem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
-      <NavItem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
+      <navitem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
+      <navitem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
-      <NavItem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
+      <navitem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
+      <navitem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
-      <NavItem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
+      <navitem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
+      <navitem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
-      <NavItem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
+      <navitem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
+      <navitem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
     </li>
     <li class="nav-dernier">
-      <NavItem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
-      <NavItem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <navitem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <navitem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
     </li>
         </ul>
       </div>
