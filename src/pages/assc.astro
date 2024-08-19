@@ -1,0 +1,14 @@
+---
+// Import the layout
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Btn from '../components/btn.astro';
+---
+
+<!-- Use the layout and pass content into the slot -->
+<BaseLayout mainClass="construction">
+	<Hero imageUrl="/images/construction.jpg" altText="About Page Hero" 
+    texte_fr="Page en construction."
+    texte_en="Page is under construction."
+    none="bouton-est-invisible"/>
+</BaseLayout>

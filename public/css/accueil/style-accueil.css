@@ -1,3 +1,7 @@
+.red {
+  border-color: red;
+}
+
 .accueil {
   margin-bottom: -250px;
 }
@@ -267,6 +271,7 @@
   cursor: pointer;
   text-decoration: none;
 }
+
 
 .rotate-arrow {
   /* Initial styles for the SVG */
