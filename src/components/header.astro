@@ -1,5 +1,8 @@
 ---
-const { currentPath, active=false } = Astro.props;
+import NavItem from './NavItem.astro';
+import LanguageSwitcher from './langageSwitcher.astro';
+
+const { currentPath } = Astro.props;
 ---
 
 <nav class="nav-wrapper">
@@ -48,36 +51,31 @@ const { currentPath, active=false } = Astro.props;
             </svg>
           </a>
           </li>
-          <li class="nav-premier langue">
-            <span class="choix_langue_en">EN</span>
-            <span class="choix_langue_fr">FR</span>
-          </li>
-
-          <li>
-            <div lang="fr" data-index="1" class="nav-item "><a class={currentPath === "/alarme/" ? 'active-nav' : ''} href="/alarme">Alarme incendie</a></div>
-            <div lang="en" data-index="1" class="nav-item"><a class={currentPath === "/alarme/" ? 'active-nav' : ''} href="/alarme">Fire protection</a></div>
-          </li>
-
-          <li>
-            <div lang="fr" data-index="1" class="nav-item"><a class={currentPath === "/assc/" ? 'active-nav' : ''} href="/assc">ASSC</a></div>
-            <div lang="en" data-index="1" class="nav-item"><a class={currentPath === "/assc/" ? 'active-nav' : ''} href="/assc">UPS</a></div>
-          </li>
-          <li>
-            <div lang="fr" data-index="2" class="nav-item "><a class={currentPath === "/projets/" ? 'active-nav' : ''} href="/projets">Projets</a></div>
-            <div lang="en" data-index="2" class="nav-item "><a class={currentPath === "/projets/" ? 'active-nav' : ''} href="/projets">Projects</a></div>
-          </li>
-          <li>
-            <div lang="fr" data-index="3" class="nav-item "><a class={currentPath === "/emplois/" ? 'active-nav' : ''}  href="/emplois">Emplois</a></div>
-            <div lang="en" data-index="3" class="nav-item "><a class={currentPath === "/emplois/"  ? 'active-nav' : ''}  href="/emplois">Careers</a></div>
-          </li>
-          <li>
-            <div lang="fr" data-index="4" class="nav-item "><a class={currentPath === "/a-propos/"  ? 'active-nav' : ''}  href="/a-propos">À propos</a></div>
-            <div lang="en" data-index="4" class="nav-item "><a class={currentPath === "/a-propos/"  ? 'active-nav' : ''}  href="/a-propos">About us</a></div>
-          </li>
-          <li class="nav-dernier">
-            <div lang="fr" data-index="5" class="nav-item "><a class={currentPath === "/contact/"  ? 'active-nav' : ''}  href="/contact">Contact</a></div>
-            <div lang="en" data-index="5" class="nav-item "><a class={currentPath === "/contact/"  ? 'active-nav' : ''}  href="/contact">Contact</a></div>
-          </li>
+          <LanguageSwitcher />
+    <li>
+      <NavItem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
+      <NavItem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
+    </li>
+    <li>
+      <NavItem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
+      <NavItem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
+    </li>
+    <li>
+      <NavItem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
+      <NavItem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
+    </li>
+    <li>
+      <NavItem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
+      <NavItem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
+    </li>
+    <li>
+      <NavItem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
+      <NavItem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
+    </li>
+    <li class="nav-dernier">
+      <NavItem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <NavItem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+    </li>
         </ul>
       </div>
     </nav>
