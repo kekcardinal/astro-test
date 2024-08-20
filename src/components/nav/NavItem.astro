@@ -2,7 +2,7 @@
 const { lang, index, href, text, currentPath } = Astro.props;
 const isActive = currentPath === href ? 'active-nav' : '';
 ---
-
+<div>{currentPath}</div>
 <div lang={lang} data-index={index} class="nav-item">
   <a class={isActive} href={href}>{text}</a>
 </div>

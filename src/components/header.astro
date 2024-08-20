@@ -1,5 +1,5 @@
 ---
-const { currentPath } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
 import LangageSwitcher from './nav/LangageSwitcher.astro';
 import NavItem from './nav/NavItem.astro';
 ---
