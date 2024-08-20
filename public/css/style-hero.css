@@ -65,10 +65,13 @@
   display: none;
 }
 
-.btn-hero a {
+.btn-hero span{
   color: var(--palette_jaune);
-  text-decoration: none;
   padding-left: 5px;
+}
+
+.decoration-off{
+  text-decoration:none;
 }
 
 .btn-hero svg {
