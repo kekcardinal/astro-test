@@ -1,4 +1,16 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+// other imports
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // other configs
+
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: "[name]-[hash].js",
+        },
+      },
+    },
+  },
+});
