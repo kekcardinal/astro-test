@@ -1,0 +1,44 @@
+---
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
+
+interface Projet {
+  contentTypeId: "projet",
+  fields: {
+    "titreProjet": EntryFieldTypes.Text,
+    "descriptionProjet": EntryFieldTypes.RichText,
+    "imageProjet": EntryFieldTypes.Asset
+  }
+}
+//const entries = await contentfulClient.withAllLocales.getEntries<Projet>({
+// Fetch the entries in French (locale "fr")
+  const entries = await contentfulClient.getEntries<Projet>({
+  content_type: "projet",
+  locale: 'fr-CA', // Specify the French locale
+});
+
+console.log(entries); // Log the entries to see the fetched content
+//console.log(entries.items.fields.imageProjet);
+
+
+const jsonString = JSON.stringify(entries, null, 2);
+---
+<!--<pre>
+  <code>{jsonString}</code>
+</pre>
+-->
+<article>
+  {entries.items.length > 0 ? (
+    entries.items.map((item) => (
+      <section>
+        <h2>{item.fields["titreProjet"]}</h2>
+        <article set:html={documentToHtmlString(item.fields["descriptionProjet"])}></article>
+        <img src={`${item.fields["imageProjet"].fields.file.url}?w=200&h=400`} alt={item.fields["titreProjet"]} />
+
+      </section>
+    ))
+  ) : (
+    <p>No projects found.</p> // Message if no entries are found
+  )}
+</article>
