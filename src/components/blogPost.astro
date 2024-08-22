@@ -15,7 +15,6 @@ const entries = await contentfulClient.getEntries<BlogPost>({
   content_type: "blogPost",
 });
 ---
-
 <article>
   {entries.items.map((item) => (
     <section>
