@@ -3,6 +3,8 @@ import { contentfulClient } from "../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { EntryFieldTypes } from "contentful";
 
+const lang="fr-CA"
+
 interface Projet {
   contentTypeId: "projet",
   fields: {
@@ -15,7 +17,7 @@ interface Projet {
 // Fetch the entries in French (locale "fr")
   const entries = await contentfulClient.getEntries<Projet>({
   content_type: "projet",
-  locale: 'fr-CA', // Specify the French locale
+  locale: lang, // Specify the French locale
 });
 
 console.log(entries); // Log the entries to see the fetched content
