@@ -1,5 +1,8 @@
 ---
-const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const url = new URL(Astro.url.href);
+const pathname = url.pathname.replace(/\/$/, ''); // Remove trailing slash
+const currentPath = pathname; // Use this as the current path
+
 import LangageSwitcher from './nav/LangageSwitcher.astro';
 import NavItem from './nav/NavItem.astro';
 ---
@@ -52,28 +55,28 @@ import NavItem from './nav/NavItem.astro';
           </li>
           <LangageSwitcher />
     <li>
-      <NavItem lang="fr" index="1" href="/alarme" text="Alarme incendie" currentPath={currentPath} />
-      <NavItem lang="en" index="1" href="/alarme" text="Fire protection" currentPath={currentPath} />
+      <NavItem lang="fr" index="1" href="/alarme?lang=fr" text="Alarme incendie" currentPath={currentPath} />
+      <NavItem lang="en" index="1" href="/alarme?lang=en" text="Fire protection" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="2" href="/assc" text="ASSC" currentPath={currentPath} />
-      <NavItem lang="en" index="2" href="/assc" text="UPS" currentPath={currentPath} />
+      <NavItem lang="fr" index="2" href="/assc?lang=fr" text="ASSC" currentPath={currentPath} />
+      <NavItem lang="en" index="2" href="/assc?lang=en" text="UPS" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="3" href="/projets" text="Projets" currentPath={currentPath} />
-      <NavItem lang="en" index="3" href="/projets" text="Projects" currentPath={currentPath} />
+      <NavItem lang="fr" index="3" href="/projets?lang=fr" text="Projets" currentPath={currentPath} />
+      <NavItem lang="en" index="3" href="/projets?lang=en" text="Projects" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="4" href="/emplois" text="Emplois" currentPath={currentPath} />
-      <NavItem lang="en" index="4" href="/emplois" text="Careers" currentPath={currentPath} />
+      <NavItem lang="fr" index="4" href="/emplois?lang=fr" text="Emplois" currentPath={currentPath} />
+      <NavItem lang="en" index="4" href="/emplois?lang=en" text="Careers" currentPath={currentPath} />
     </li>
     <li>
-      <NavItem lang="fr" index="5" href="/a-propos" text="À propos" currentPath={currentPath} />
-      <NavItem lang="en" index="5" href="/a-propos" text="About us" currentPath={currentPath} />
+      <NavItem lang="fr" index="5" href="/a-propos?lang=fr" text="À propos" currentPath={currentPath} />
+      <NavItem lang="en" index="5" href="/a-propos?lang=en" text="About us" currentPath={currentPath} />
     </li>
     <li class="nav-dernier">
-      <NavItem lang="fr" index="6" href="/contact" text="Contact" currentPath={currentPath} />
-      <NavItem lang="en" index="6" href="/contact" text="Contact" currentPath={currentPath} />
+      <NavItem lang="fr" index="6" href="/contact?lang=fr" text="Contact" currentPath={currentPath} />
+      <NavItem lang="en" index="6" href="/contact?lang=en" text="Contact" currentPath={currentPath} />
     </li>
         </ul>
       </div>

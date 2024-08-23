@@ -1,0 +1,774 @@
+---
+// Import the layout
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Btn from '../components/Btn.astro';
+---
+
+<!-- Use the layout and pass content into the slot -->
+<BaseLayout mainClass="projets">
+	<Hero imageUrl="/images/buildings/building.webp" altText="About Page Hero" 
+    texte_fr="Vous-aimeriez en faire partie?"
+    texte_en="You want to be a part of our projects?"
+    texte_btn_fr="Contactez-nous"
+    texte_btn_en="Contact-us"
+    lien="/contact/"/>
+
+
+    <section class="overlay-section-projets">
+        <h1 lang="fr" class="titre-projets">
+          Filtrez par type d’établissement
+        </h1>
+        <h1 lang="en" class="titre-projets">Sort by building type</h1>
+        <div class="conteneur-filtre">
+          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="school">
+            École
+          </div>
+          
+          <div lang="en" class="btn-filtre-projets" data-filter="school">
+            School
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="church">
+            Église
+          </div>
+
+          <div lang="en" class="btn-filtre-projets" data-filter="church">
+            Church
+          </div>
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="condo">
+            Immeuble à logements
+          </div>
+
+          <div lang="en" class="btn-filtre-projets" data-filter="condo">
+            Condominium
+          </div>
+
+          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="residential">
+            Résidentiel
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="residential">
+            Residential
+          </div> -->
+          <!-- 
+          <div lang="fr" class="btn-filtre-projets" data-filter="arena">
+            Arena
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="arena">
+            Arena
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="commercial">
+            Commercial
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="commercial">
+            Commercial
+          </div>
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="bank">
+            Banque
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="bank">
+            Bank
+          </div>
+          <!-- 
+          <div lang="fr" class="btn-filtre-projets" data-filter="education">
+            Éducation
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="education">
+            Education
+          </div> -->
+
+          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="university">
+            Université
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="university">
+            University
+          </div> -->
+
+          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="theater">
+            Théatre
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="theater">
+            Theater
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="office">
+            Bureaux
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="office">
+            Office
+          </div>
+
+          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="health">
+            Santé
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="health">
+            Health
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="government">
+            Gouvernement
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="government">
+            Government
+          </div>
+          <!-- 
+          <div lang="fr" class="btn-filtre-projets" data-filter="kindergarden">
+            Garderie
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="kindergarden">
+            Kindergarden
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="train-station">
+            Gare
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="train-station">
+            Train station
+          </div>
+          <!-- 
+          <div lang="fr" class="btn-filtre-projets" data-filter="hospital">
+            Hôpital
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="hospital">
+            Hospital
+          </div> -->
+
+          <div lang="fr" class="btn-filtre-projets" data-filter="hotel">
+            Hôtel
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="hotel">
+            Hotel
+          </div>
+          <!-- 
+          <div lang="fr" class="btn-filtre-projets" data-filter="restaurant">
+            Restaurant
+          </div>
+          <div lang="en" class="btn-filtre-projets" data-filter="restaurant">
+            Restaurant
+          </div> -->
+        </div>
+
+        <div class="projet building" data-category="government">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">
+                Agence Spatiale Canadienne
+              </div>
+              <div lang="en" class="titre-building">Canadian Space Agency</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-landscape">
+                <img
+                  class="img-building"
+                  src="/images/buildings/agence.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_landscape">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="hotel">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Hôtel intercontinental</div>
+              <div lang="en" class="titre-building">Intercontinental Hotel</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/hotel-inter.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="hotel">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Hôtel St-James</div>
+              <div lang="en" class="titre-building">St-James Hotel</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/saint-james.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens</p>
+                <p lang="fr">Fire alarm pannel - Siemens</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="bank">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Banque de Montréal</div>
+              <div lang="en" class="titre-building">Bank of Montreal</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-landscape">
+                <img class="img-building" src="/images/buildings/bmo.webp" />
+              </div>
+              <div class="conteneur_projet_texte_landscape">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">759 Square Victoria</div>
+              <div lang="en" class="titre-building">759 Square Victoria</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/759-square-victoria.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">800 René-Lévesque</div>
+              <div lang="en" class="titre-building">800 René-Lévesque</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/800-rene-levesque.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">900 de Maisonneuve</div>
+              <div lang="en" class="titre-building">900 Maisonneuve</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/900-maisonneuve.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">
+                Centre de commerce Mondial
+              </div>
+              <div lang="en" class="titre-building">
+                World Trade Centre Montréal
+              </div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img class="img-building" src="/images/buildings/ccm.webp" />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="commercial">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Centre Eaton</div>
+              <div lang="en" class="titre-building">Eaton Center</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/centre-eaton.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Tour CIBC</div>
+              <div lang="en" class="titre-building">CIBC Tower</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/cibc.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">1250 René-Lévesque</div>
+              <div lang="en" class="titre-building">1250 René-Lévesque</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/1250.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="train-station">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Gare Windsor</div>
+              <div lang="en" class="titre-building">Windsor Station</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-landscape">
+                <img
+                  class="img-building"
+                  src="/images/buildings/gare-windsor.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_landscape">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="commercial">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Place Bonaventure</div>
+              <div lang="en" class="titre-building">Place Bonaventure</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-landscape">
+                <img
+                  class="img-building"
+                  src="/images/buildings/place-bonaventure.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_landscape">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="commercial">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Palais des congrès</div>
+              <div lang="en" class="titre-building">Palais des congrès</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/palais-congres2.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="hotel">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Ritz-Carlton</div>
+              <div lang="en" class="titre-building">Ritz-Carlton</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/ritz-carlton.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="church">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Église St-George</div>
+              <div lang="en" class="titre-building">St-George Church</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-landscape">
+                <img
+                  class="img-building"
+                  src="/images/buildings/saint-george-eglise.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_landscape">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Tour Bell Media</div>
+              <div lang="en" class="titre-building">Bell Media Tower</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/tour-bell.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Tour CGI</div>
+              <div lang="en" class="titre-building">CGI Tower</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/tour-cgi.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="condo">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Tour des Canadiens</div>
+              <div lang="en" class="titre-building">Tour des Canadiens</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/tour-des-canadiens.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projet building" data-category="office">
+          <div class="conteneur_checkbox_projet">
+            <div class="button">
+              <div lang="fr" class="titre-building">Tour Telus</div>
+              <div lang="en" class="titre-building">Telus Tower</div>
+              <div class="titre symbole">&#43;</div>
+            </div>
+            <input
+              aria-label="Checkbox first project"
+              type="checkbox"
+              class="state"
+              hidden
+            />
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="conteneur-img-building-portrait">
+                <img
+                  class="img-building"
+                  src="/images/buildings/tour-telus.webp"
+                />
+              </div>
+              <div class="conteneur_projet_texte_portrait">
+                <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+                <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</BaseLayout>

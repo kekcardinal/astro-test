@@ -1,3 +1,7 @@
+.test * {
+  color: black;
+}
+
 .projets {
   margin-bottom: -50px;
 }

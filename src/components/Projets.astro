@@ -1,0 +1,60 @@
+---
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
+
+const lang="fr-CA"
+
+interface Projet {
+  contentTypeId: "projet",
+  fields: {
+    "titreProjet": EntryFieldTypes.Text,
+    "descriptionProjet": EntryFieldTypes.RichText,
+    "imageProjet": EntryFieldTypes.Asset
+  }
+}
+//const entries = await contentfulClient.withAllLocales.getEntries<Projet>({
+// Fetch the entries in French (locale "fr")
+const entries = await contentfulClient.withAllLocales.getEntries<Projet>({
+  content_type: "projet", // Specify the French locale
+});
+
+console.log(entries.items); // Log the entries to see the fetched content
+//console.log(entries.items.fields.imageProjet);
+
+const jsonString = JSON.stringify(entries, null, 2);
+---
+ <!-- <pre class="test">
+  <code>{jsonString}</code>
+</pre> -->
+
+<article>
+  {entries.items.length > 0 ? (
+    entries.items.map((item) => (
+      <section lang="en" class="test">
+        <h2>{item.fields["titreProjet"]["en-US"]}</h2>
+        <article set:html={documentToHtmlString(item.fields["descriptionProjet"]["en-US"])}></article>
+        <img src={`${item.fields["imageProjet"]["en-US"].fields.file["en-US"].url}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} />
+        {/* <img src={`${item.fields["imageProjet"]["fields"]["file"]["en-US"]["url"]}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} /> */}
+
+      </section>
+    ))
+  ) : (
+    <p>No projects found.</p> // Message if no entries are found
+  )}
+</article>
+<article>
+    {entries.items.length > 0 ? (
+      entries.items.map((item) => (
+        <section lang="fr" class="test">
+          <h2>{item.fields["titreProjet"]["fr-CA"]}</h2>
+          <article set:html={documentToHtmlString(item.fields["descriptionProjet"]["fr-CA"])}></article>
+          <img src={`${item.fields["imageProjet"]["fr-CA"].fields.file["fr-CA"].url}?w=200&h=400`} alt={item.fields["titreProjet"]["fr-CA"]} />
+          {/* <img src={`${item.fields["imageProjet"]["fields"]["file"]["en-US"]["url"]}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} /> */}
+  
+        </section>
+      ))
+    ) : (
+      <p>No projects found.</p> // Message if no entries are found
+    )}
+  </article>
