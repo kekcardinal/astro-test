@@ -1,60 +1,67 @@
 ---
-import { contentfulClient } from "../lib/contentful";
+// ProjetItem.astro
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import type { EntryFieldTypes } from "contentful";
 
-const lang="fr-CA"
-
-interface Projet {
-  contentTypeId: "projet",
-  fields: {
-    "titreProjet": EntryFieldTypes.Text,
-    "descriptionProjet": EntryFieldTypes.RichText,
-    "imageProjet": EntryFieldTypes.Asset
-  }
-}
-//const entries = await contentfulClient.withAllLocales.getEntries<Projet>({
-// Fetch the entries in French (locale "fr")
-const entries = await contentfulClient.withAllLocales.getEntries<Projet>({
-  content_type: "projet", // Specify the French locale
-});
-
-console.log(entries.items); // Log the entries to see the fetched content
-//console.log(entries.items.fields.imageProjet);
-
-const jsonString = JSON.stringify(entries, null, 2);
+const { titreProjet, descriptionProjet, imageProjet, lang } = Astro.props;
 ---
- <!-- <pre class="test">
-  <code>{jsonString}</code>
-</pre> -->
 
-<article>
-  {entries.items.length > 0 ? (
-    entries.items.map((item) => (
-      <section lang="en" class="test">
-        <h2>{item.fields["titreProjet"]["en-US"]}</h2>
-        <article set:html={documentToHtmlString(item.fields["descriptionProjet"]["en-US"])}></article>
-        <img src={`${item.fields["imageProjet"]["en-US"].fields.file["en-US"].url}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} />
-        {/* <img src={`${item.fields["imageProjet"]["fields"]["file"]["en-US"]["url"]}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} /> */}
+<div class="projet building" data-category="office" lang={lang} class="test">
+    <div class="conteneur_checkbox_projet">
+        <div class="button">
+            <div class="titre-building">{titreProjet}</div>
+            <div class="titre symbole">&#43;</div>
+        </div>
+        <input
+        aria-label="Checkbox first project"
+        type="checkbox"
+        class="state"
+        hidden
+      />
+    </div>
+    <div class="content">
+        <div class="inner">
+          <div class="conteneur-img-building-portrait">
+            <img
+              class="img-building"
+              src={`${imageProjet}`} alt={`${titreProjet}`}
+            />
+          </div>
+          <div class="conteneur_projet_texte_portrait">
+            <p set:html={documentToHtmlString(descriptionProjet)}></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 
-      </section>
-    ))
-  ) : (
-    <p>No projects found.</p> // Message if no entries are found
-  )}
-</article>
-<article>
-    {entries.items.length > 0 ? (
-      entries.items.map((item) => (
-        <section lang="fr" class="test">
-          <h2>{item.fields["titreProjet"]["fr-CA"]}</h2>
-          <article set:html={documentToHtmlString(item.fields["descriptionProjet"]["fr-CA"])}></article>
-          <img src={`${item.fields["imageProjet"]["fr-CA"].fields.file["fr-CA"].url}?w=200&h=400`} alt={item.fields["titreProjet"]["fr-CA"]} />
-          {/* <img src={`${item.fields["imageProjet"]["fields"]["file"]["en-US"]["url"]}?w=200&h=400`} alt={item.fields["titreProjet"]["en-US"]} /> */}
-  
-        </section>
-      ))
-    ) : (
-      <p>No projects found.</p> // Message if no entries are found
-    )}
-  </article>
+
+<!-- <div class="projet building" data-category="office">
+    <div class="conteneur_checkbox_projet">
+      <div class="button">
+        <div lang="fr" class="titre-building">Tour Telus</div>
+        <div lang="en" class="titre-building">Telus Tower</div>
+        <div class="titre symbole">&#43;</div>
+      </div>
+      <input
+        aria-label="Checkbox first project"
+        type="checkbox"
+        class="state"
+        hidden
+      />
+    </div>
+
+    <div class="content">
+      <div class="inner">
+        <div class="conteneur-img-building-portrait">
+          <img
+            class="img-building"
+            src="/images/buildings/tour-telus.webp"
+          />
+        </div>
+        <div class="conteneur_projet_texte_portrait">
+          <p lang="en">Panneau d'alarme incendie - Siemens XLS</p>
+          <p lang="fr">Fire alarm pannel - Siemens XLS</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
