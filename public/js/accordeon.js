@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const jobElements = document.querySelectorAll(
-    ".projet.building.emplois-demander"
-  );
+  const jobElements = document.querySelectorAll(".projet.building.emplois-demander");
 
   // Count the number of elements
   const jobCount = jobElements.length;
@@ -10,15 +8,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
   document.querySelectorAll(".jobCount").forEach((span) => {
     span.textContent = jobCount;
   });
+
   const checkboxs = document.querySelectorAll(".state");
-  let conteneur_checkboxs = document.querySelectorAll(
-    ".conteneur_checkbox_projet"
-  );
+  let conteneur_checkboxs = document.querySelectorAll(".conteneur_checkbox_projet");
+
+  let currentlyOpenContent = null;
 
   conteneur_checkboxs.forEach((conteneur) => {
     conteneur.addEventListener("click", function (event) {
       let checkbox_projet = conteneur.querySelector('input[type="checkbox"]');
-      if (checkbox_projet.checked == true) {
+      if (checkbox_projet.checked) {
         checkbox_projet.checked = false;
       } else {
         checkbox_projet.checked = true;
@@ -27,17 +26,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
       checkbox_projet.dispatchEvent(changeEvent);
     });
   });
+
   checkboxs.forEach((checkbox) => {
-    // console.log(checkbox);
     checkbox.addEventListener("change", function () {
       let content = checkbox.closest(".projet").querySelector(".content");
       let symbole = checkbox.previousElementSibling.querySelector(".symbole");
+
       if (checkbox.checked) {
+        // Close the currently open content, if any
+        if (currentlyOpenContent && currentlyOpenContent !== content) {
+          currentlyOpenContent.style.maxHeight = "0";
+          currentlyOpenContent.previousElementSibling.querySelector(".state").checked = false;
+          currentlyOpenContent.previousElementSibling.querySelector(".symbole").textContent = "+";
+        }
+
+        // Open the new content
         content.style.maxHeight = content.scrollHeight + "px";
         symbole.textContent = "−";
+
+        // Update the currently open content
+        currentlyOpenContent = content;
       } else {
+        // Close the current content
         content.style.maxHeight = "0";
         symbole.textContent = "+";
+
+        // Clear the reference to the currently open content
+        if (currentlyOpenContent === content) {
+          currentlyOpenContent = null;
+        }
       }
     });
   });

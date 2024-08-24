@@ -27,11 +27,11 @@
 }
 
 html[lang="en"] [lang="fr"] {
-  display: none;
+  display: none !important;
 }
 
 html[lang="fr"] [lang="en"] {
-  display: none;
+  display: none !important;
 }
 
 body {
