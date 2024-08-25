@@ -6,13 +6,15 @@ import Btn from '../components/Btn.astro';
 import Projet from '../components/Projets.astro';
 import { contentfulClient } from '../lib/contentful';
 import type { EntryFieldTypes } from 'contentful';
+import Filtres from '../components/Filtres.astro'
 
 interface Projet {
   contentTypeId: "projet",
   fields: {
     "titreProjet": EntryFieldTypes.Text,
     "descriptionProjet": EntryFieldTypes.RichText,
-    "imageProjet": EntryFieldTypes.Asset
+    "imageProjet": EntryFieldTypes.Asset,
+    "category":EntryFieldTypes.Text,
   }
 }
 
@@ -41,7 +43,8 @@ const entries = await contentfulClient.withAllLocales.getEntries<{
   fields: {
     "titreProjet": EntryFieldTypes.Text,
     "descriptionProjet": EntryFieldTypes.RichText,
-    "imageProjet": EntryFieldTypes.Asset
+    "imageProjet": EntryFieldTypes.Asset,
+    "category":EntryFieldTypes.Text,
   }
 }>({
   content_type: "projet",
@@ -62,6 +65,35 @@ const projectsFr = entries.items.map(item => ({
   lang: "fr",
   category: item.fields["category"]["en-US"],
 }));
+
+const filtresBtnEN = entries.items.map(item => ({
+  lang:"en",
+  filtre:item.fields["category"]["en-US"],
+  category:item.fields["category"]["en-US"],
+}));
+
+
+const filtresBtnFR = entries.items.map(item => ({
+  lang:"fr",
+  filtre:item.fields["category"]["en-US"],
+  category:item.fields["category"]["fr-CA"],
+}));
+
+const uniqueFiltresEN = Array.from(
+  new Set(filtresBtnEN.map(filtre => filtre.category))
+).map(uniqueCategory => 
+  filtresBtnEN.find(filtre => filtre.category === uniqueCategory)
+);
+
+// Create unique French filters
+const uniqueFiltresFR = Array.from(
+  new Set(filtresBtnFR.map(filtre => filtre.category))
+).map(uniqueCategory => 
+  filtresBtnFR.find(filtre => filtre.category === uniqueCategory)
+);
+
+
+
 ---
 
 <!-- Use the layout and pass content into the slot -->
@@ -80,134 +112,21 @@ const projectsFr = entries.items.map(item => ({
         </h1>
         <h1 lang="en" class="titre-projets">Sort by building type</h1>
         <div class="conteneur-filtre">
-          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="school">
-            École
-          </div>
-          
-          <div lang="en" class="btn-filtre-projets" data-filter="school">
-            School
-          </div> -->
+            {uniqueFiltresEN.length > 0 ? (
+              uniqueFiltresEN.map((filtre) => (
+                <Filtres {...filtre} />
+              ))
+            ) : (
+              <p>No projects found.</p>
+            )}
 
-          <div lang="fr" class="btn-filtre-projets" data-filter="church">
-            Église
-          </div>
-
-          <div lang="en" class="btn-filtre-projets" data-filter="church">
-            Church
-          </div>
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="condo">
-            Immeuble à logements
-          </div>
-
-          <div lang="en" class="btn-filtre-projets" data-filter="condo">
-            Condominium
-          </div>
-
-          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="residential">
-            Résidentiel
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="residential">
-            Residential
-          </div> -->
-          <!-- 
-          <div lang="fr" class="btn-filtre-projets" data-filter="arena">
-            Arena
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="arena">
-            Arena
-          </div> -->
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="commercial">
-            Commercial
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="commercial">
-            Commercial
-          </div>
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="bank">
-            Banque
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="bank">
-            Bank
-          </div>
-          <!-- 
-          <div lang="fr" class="btn-filtre-projets" data-filter="education">
-            Éducation
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="education">
-            Education
-          </div> -->
-
-          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="university">
-            Université
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="university">
-            University
-          </div> -->
-
-          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="theater">
-            Théatre
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="theater">
-            Theater
-          </div> -->
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="office">
-            Bureaux
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="office">
-            Office
-          </div>
-
-          <!-- <div lang="fr" class="btn-filtre-projets" data-filter="health">
-            Santé
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="health">
-            Health
-          </div> -->
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="government">
-            Gouvernement
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="government">
-            Government
-          </div>
-          <!-- 
-          <div lang="fr" class="btn-filtre-projets" data-filter="kindergarden">
-            Garderie
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="kindergarden">
-            Kindergarden
-          </div> -->
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="train-station">
-            Gare
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="train-station">
-            Train station
-          </div>
-          <!-- 
-          <div lang="fr" class="btn-filtre-projets" data-filter="hospital">
-            Hôpital
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="hospital">
-            Hospital
-          </div> -->
-
-          <div lang="fr" class="btn-filtre-projets" data-filter="hotel">
-            Hôtel
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="hotel">
-            Hotel
-          </div>
-          <!-- 
-          <div lang="fr" class="btn-filtre-projets" data-filter="restaurant">
-            Restaurant
-          </div>
-          <div lang="en" class="btn-filtre-projets" data-filter="restaurant">
-            Restaurant
-          </div> -->
+            {uniqueFiltresFR.length > 0 ? (
+              uniqueFiltresFR.map((filtre) => (
+                <Filtres {...filtre} />
+              ))
+            ) : (
+              <p>No projects found.</p>
+            )}
         </div>
 
         <article>

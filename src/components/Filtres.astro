@@ -1,0 +1,9 @@
+---
+
+const { category, lang, filtre } = Astro.props;
+ 
+---
+
+<div lang={lang} class="btn-filtre-projets" data-filter={filtre}>
+    {category}
+</div>
