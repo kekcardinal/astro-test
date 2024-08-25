@@ -41,6 +41,7 @@
   flex-wrap: wrap;
 }
 .btn-filtre-projets {
+  text-transform: capitalize;
   display: flex;
   color: var(--palette_bleu);
   justify-content: center;
