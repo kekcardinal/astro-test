@@ -25,6 +25,7 @@
   row-gap: 10px;
 }
 .emplois-tags {
+  text-transform:capitalize;
   background-color: #d9d9d9;
   padding: 10px;
   border-radius: 10px;
