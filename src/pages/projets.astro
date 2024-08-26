@@ -50,21 +50,25 @@ const entries = await contentfulClient.withAllLocales.getEntries<{
   content_type: "projet",
 });
 
-const projectsEn = entries.items.map(item => ({
-  titreProjet: item.fields["titreProjet"]["en-US"],
-  descriptionProjet: item.fields["descriptionProjet"]["en-US"],
-  imageProjet: item.fields["imageProjet"]["en-US"].fields.file["en-US"].url,
-  lang: "en",
-  category: item.fields["category"]["en-US"],
-}));
+const projectsEn = entries.items
+  .map(item => ({
+    titreProjet: item.fields["titreProjet"]["en-US"],
+    descriptionProjet: item.fields["descriptionProjet"]["en-US"],
+    imageProjet: item.fields["imageProjet"]["en-US"].fields.file["en-US"].url,
+    lang: "en",
+    category: item.fields["category"]["en-US"],
+  }))
+  .sort((a, b) => a.titreProjet.localeCompare(b.titreProjet));
 
-const projectsFr = entries.items.map(item => ({
-  titreProjet: item.fields["titreProjet"]["fr-CA"],
-  descriptionProjet: item.fields["descriptionProjet"]["fr-CA"],
-  imageProjet: item.fields["imageProjet"]["en-US"].fields.file["en-US"].url,
-  lang: "fr",
-  category: item.fields["category"]["en-US"],
-}));
+  const projectsFr = entries.items
+  .map(item => ({
+    titreProjet: item.fields["titreProjet"]["fr-CA"],
+    descriptionProjet: item.fields["descriptionProjet"]["fr-CA"],
+    imageProjet: item.fields["imageProjet"]["en-US"].fields.file["en-US"].url,
+    lang: "fr",
+    category: item.fields["category"]["en-US"],
+  }))
+  .sort((a, b) => a.titreProjet.localeCompare(b.titreProjet));
 
 const filtresBtnEN = entries.items.map(item => ({
   lang:"en",
