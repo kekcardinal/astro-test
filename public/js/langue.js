@@ -1,4 +1,12 @@
 function setLanguage(lang) {
+  // Define the allowed languages
+  const allowedLanguages = ["en", "fr"];
+
+  // Check if the provided lang is in the allowed languages, otherwise default to 'en'
+  if (!allowedLanguages.includes(lang)) {
+    lang = "en";
+  }
+
   // Store the language preference in local storage
   localStorage.setItem("preferredLanguage", lang);
 
@@ -17,8 +25,16 @@ function setLanguage(lang) {
 }
 
 function getLanguage() {
-  return localStorage.getItem("preferredLanguage") || "en"; // Default to 'en' if no preference is found
+  // Get the language preference from local storage
+  const lang = localStorage.getItem("preferredLanguage") || "en"; // Default to 'en' if no preference is found
+
+  // Define the allowed languages
+  const allowedLanguages = ["en", "fr"];
+
+  // Return the language if it's allowed, otherwise return 'en'
+  return allowedLanguages.includes(lang) ? lang : "en";
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const lang = getLanguage();

@@ -70,18 +70,21 @@ const projectsEn = entries.items
   }))
   .sort((a, b) => a.titreProjet.localeCompare(b.titreProjet));
 
-const filtresBtnEN = entries.items.map(item => ({
-  lang:"en",
-  filtre:item.fields["category"]["en-US"],
-  category:item.fields["category"]["en-US"],
-}));
+  const filtresBtnEN = entries.items
+  .map(item => ({
+    lang: "en",
+    filtre: item.fields["category"]["en-US"],
+    category: item.fields["category"]["en-US"],
+  }))
+  .sort((a, b) => a.category.localeCompare(b.category));
 
-
-const filtresBtnFR = entries.items.map(item => ({
-  lang:"fr",
-  filtre:item.fields["category"]["en-US"],
-  category:item.fields["category"]["fr-CA"],
-}));
+const filtresBtnFR = entries.items
+  .map(item => ({
+    lang: "fr",
+    filtre: item.fields["category"]["en-US"],
+    category: item.fields["category"]["fr-CA"],
+  }))
+  .sort((a, b) => a.category.localeCompare(b.category));
 
 const uniqueFiltresEN = Array.from(
   new Set(filtresBtnEN.map(filtre => filtre.category))
