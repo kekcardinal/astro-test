@@ -1,0 +1,50 @@
+---
+// ProjetItem.astro
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+
+const { titreEmplois, descriptionEmplois, tags, lang} = Astro.props;
+---
+
+
+<div class="projet building emplois-demander" lang={lang}>
+    <div class="conteneur_checkbox_projet">
+      <div class="button">
+        <div class="titre-building">
+        {titreEmplois}
+        </div>
+        <div class="titre symbole">&#43;</div>
+      </div>
+      <input
+        aria-label="Checkbox first project"
+        type="checkbox"
+        class="state"
+        hidden
+      />
+    </div>
+
+    <div class="content">
+      <div class="inner">
+        <div class="inner-texte-emplois">
+          <div class="conteneur-emplois-tags">
+            {tags.map(tag => (
+                <div class="emplois-tags">{tag}</div>
+              ))}
+          </div>
+          <p  set:html={documentToHtmlString(descriptionEmplois)}></p>
+
+          <a
+            href="mailto:felixbcousineau@stanex.com"
+            lang="fr"
+            class="emplois-appliquer"
+            >Appliquer</a
+          >
+          <a
+            href="mailto:felixbcousineau@stanex.com"
+            lang="en"
+            class="emplois-appliquer"
+            >Apply</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
