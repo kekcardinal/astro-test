@@ -1,13 +1,13 @@
 ---
 // Import the layout
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Btn from '../components/Btn.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Btn from '../../components/Btn.astro';
 ---
 
 <!-- Use the layout and pass content into the slot -->
 <BaseLayout mainClass="alarme">
-	<Hero imageUrl="/images/hero-alarme.webp" altText="About Page Hero" 
+	<Hero imageUrl="/../images/hero-alarme.webp" altText="About Page Hero" 
     texte_fr="Besoin d’un contrat de service ou d’un nouveau panneau d’incendie?"
     texte_en="Need a service contract or a new fire panel?"
     texte_btn_fr="Contactez-nous"
@@ -20,7 +20,6 @@ import Btn from '../components/Btn.astro';
             <div class="conteneur_checkbox_projet">
               <div class="button">
                 <div  class="titre-building">Inspection</div>
-              
                 <div class="titre symbole">&#43;</div>
               </div>
               <input
@@ -52,10 +51,8 @@ import Btn from '../components/Btn.astro';
                         </svg>                        
                 </div>
                 <div class="inner-texte-alarme">
-                    <h2 >Assurer la sécurité avec des inspections rigoureuses des alarmes incendie </h2>
-                    <p >La division Inspection des alarmes incendie de Stanex s'assure que toutes les composantes sont testées selon les normes actuelles. Chaque inspection est minutieuse, respectant les dernières réglementations pour garantir la sécurité et la fiabilité de nos systèmes d'alarme incendie. Notre équipe de professionnels dévoués s'engage à offrir le plus haut niveau de service, en veillant à ce que chaque élément fonctionne de manière optimale pour protéger les vies et les biens. Faites confiance à Stanex pour des inspections d'alarme incendie complètes et fiables.</p>
-
-                  
+                    <h2>Ensuring Safety with Rigorous Fire Alarm Inspections</h2>
+                    <p>Stanex's Fire Alarm Inspection Division ensures that all components are tested according to current standards. Each inspection is thorough, adhering to the latest regulations to guarantee the safety and reliability of our fire alarm systems. Our dedicated team of professionals is committed to providing the highest level of service, ensuring that every element is functioning optimally to protect lives and property. Trust Stanex for comprehensive and reliable fire alarm inspections.</p>
                 </div>
               </div>
             </div>
@@ -65,7 +62,6 @@ import Btn from '../components/Btn.astro';
             <div class="conteneur_checkbox_projet">
               <div class="button">
                 <div  class="titre-building">Maintenance</div>
-                
                 <div class="titre symbole">&#43;</div>
               </div>
               <input
@@ -85,10 +81,8 @@ import Btn from '../components/Btn.astro';
                            
                 </div>
                 <div class="inner-texte-alarme">
-                  <h2 >Assurer la sécurité avec un entretien expert des systèmes incendie </h2>
-                    <p >Notre équipe de professionnels dévoués s'engage à offrir le plus haut niveau de service, en résolvant tous les problèmes jusqu'à leur résolution complète. Faites confiance à Stanex pour un entretien complet et fiable des systèmes incendie, assurant un fonctionnement optimal pour protéger les vies et les biens.</p>
-
-                    
+                    <h2 >Ensuring Safety with Expert Fire System Maintenance</h2>
+                    <p >Our dedicated team of professionals is committed to providing the highest level of service, troubleshooting any issues until they are fully resolved. Trust Stanex for comprehensive and reliable fire system maintenance that keeps your systems running optimally to protect lives and property.</p>
                 </div>
               </div>
             </div>
@@ -117,10 +111,8 @@ import Btn from '../components/Btn.astro';
                                 
                 </div>
                 <div class="inner-texte-alarme">
-                  <h2 >Assurer la sécurité avec des installations professionnelles de panneaux incendie</h2>
-                  <p >La division Installation des panneaux incendie de Stanex se spécialise dans l'installation de panneaux incendie et la gestion de projets, quelle que soit leur ampleur. Chaque installation est effectuée avec soin, respectant les normes actuelles pour garantir la sécurité et la fiabilité de nos systèmes de protection incendie. Notre équipe de professionnels dévoués s'engage à offrir le plus haut niveau de service, en résolvant tous les problèmes jusqu'à leur résolution complète. Faites confiance à Stanex pour des installations de panneaux incendie complètes et fiables, assurant un fonctionnement optimal pour protéger les vies et les biens.</p>
-
-                  
+                  <h2 > Ensuring Safety with Professional Fire Panel Installations</h2>
+                  <p >Stanex's Fire Panel Installation Division specializes in installing fire panels and handling projects of any scale. Each installation is carried out meticulously, adhering to current standards to ensure the safety and reliability of our fire protection systems. Our dedicated team of professionals is committed to providing the highest level of service, troubleshooting any issues until they are fully resolved. Trust Stanex for comprehensive and reliable fire panel installations that keep your systems running optimally to protect lives and property.</p>
                 </div>
               </div>
             </div>
@@ -131,38 +123,28 @@ import Btn from '../components/Btn.astro';
         <div class="conteneur-types">
           <div>
             <h3 class="types-titres" >Commercial</h3>
-            
             <svg width="151" height="129" viewBox="0 0 151 129" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M139.246 56.5956V115.839C139.246 123.403 132.301 129 124.662 129H26.3374C18.6984 129 11.754 123.401 11.754 115.839V56.594C2.79127 52.9365 -2.50215 43.5129 1.18731 32.8851L10.0091 7.47373C11.4805 3.23432 14.8411 0 19.346 0C56.7825 0 94.219 0 131.654 0C136.159 0 139.519 3.23432 140.991 7.47373L149.812 32.8851C153.502 43.5095 148.21 52.9432 139.246 56.5956ZM36.0702 30.9301L41.7545 5.79135H19.346C17.4249 5.79135 16.1112 7.5239 15.477 9.35178L7.98571 30.9301H36.0702ZM47.6906 5.79135L42.0062 30.9301H72.5956V5.79135H47.6906ZM108.994 30.9301L103.309 5.79135H78.4042V30.9301H108.994ZM109.245 5.79135L114.93 30.9301H143.014L135.523 9.35178C134.889 7.5239 133.573 5.79135 131.654 5.79135H109.245ZM144.892 36.7198H116.106C121.934 61.7532 148.286 52.8178 144.892 36.7198ZM109.715 36.7198H78.587C81.1859 59.6326 108.462 55.8364 109.715 36.7198ZM72.4128 36.7198H41.2831C42.5364 55.8364 69.8139 59.6326 72.4128 36.7198ZM34.8941 36.7198H6.10826C2.7141 52.8195 29.0688 61.7515 34.8941 36.7198ZM94.4673 123.21V77.5017H56.5325V123.21H94.4673ZM50.724 123.21V74.6068C50.724 73.0081 52.0243 71.712 53.6283 71.712H97.3716C98.9755 71.712 100.276 73.0081 100.276 74.6068V123.21H124.662C129.151 123.21 133.437 120.165 133.437 115.839V58.0088C125.082 58.763 117.523 54.3029 113.265 45.921C105.937 61.2097 83.5768 63.1613 75.4999 46.8559C67.423 63.1646 45.0598 61.2063 37.7346 45.921C33.478 54.3029 25.9179 58.7613 17.5625 58.0088V115.837C17.5625 120.163 21.8509 123.209 26.3374 123.209L50.724 123.21Z" fill="white"/>
             </svg>     
-            <p >Votre partenaire de confiance pour les solutions de sécurité incendie commerciales
-              </p>       
-              
+            <p >Your Trusted Partner in Commercial Fire Safety Solutions</p>     
           </div>
  
 
           <div>
-            <h3 class="types-titres" >Industriel</h3>
-            
+            <h3 class="types-titres" >Industrial</h3>
             <svg width="159" height="159" viewBox="0 0 159 159" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M92.75 106H108.65C110.115 106 111.3 104.815 111.3 103.35V95.4C111.3 89.554 106.546 84.8 100.7 84.8C94.854 84.8 90.1 89.554 90.1 95.4V103.35C90.1 104.815 91.2853 106 92.75 106ZM95.4 95.4C95.4 92.4783 97.7783 90.1 100.7 90.1C103.622 90.1 106 92.4783 106 95.4V100.7H95.4V95.4ZM66.25 106H82.15C83.6147 106 84.8 104.815 84.8 103.35V95.4C84.8 89.554 80.0448 84.8 74.2 84.8C68.3553 84.8 63.6 89.554 63.6 95.4V103.35C63.6 104.815 64.7866 106 66.25 106ZM68.9 95.4C68.9 92.4783 71.277 90.1 74.2 90.1C77.123 90.1 79.5 92.4783 79.5 95.4V100.7H68.9V95.4ZM39.75 106H55.65C57.1135 106 58.3 104.815 58.3 103.35V95.4C58.3 89.554 53.5448 84.8 47.7 84.8C41.8553 84.8 37.1 89.554 37.1 95.4V103.35C37.1 104.815 38.2865 106 39.75 106ZM42.4 95.4C42.4 92.4783 44.777 90.1 47.7 90.1C50.623 90.1 53 92.4783 53 95.4V100.7H42.4V95.4ZM21.2 84.8C15.3552 84.8 10.6 89.554 10.6 95.4V103.35C10.6 104.815 11.7865 106 13.25 106H29.15C30.6135 106 31.8 104.815 31.8 103.35V95.4C31.8 89.554 27.0448 84.8 21.2 84.8ZM26.5 100.7H15.9V95.4C15.9 92.4783 18.277 90.1 21.2 90.1C24.123 90.1 26.5 92.4783 26.5 95.4V100.7ZM156.35 79.5H153.7V18.55C153.7 17.0865 152.515 15.9 151.05 15.9H129.85C128.385 15.9 127.2 17.0865 127.2 18.55V79.5H121.9V71.55C121.9 70.0865 120.715 68.9 119.25 68.9H112.337L78.6473 37.8026C77.8722 37.0896 76.7491 36.9007 75.7877 37.3226C74.8224 37.7444 74.2 38.698 74.2 39.75V65.4969L44.1973 37.8026C43.4235 37.0896 42.3017 36.9007 41.3377 37.3226C40.3724 37.7444 39.75 38.698 39.75 39.75V65.4969L9.74729 37.8026C8.97351 37.0896 7.85037 36.9007 6.88767 37.3226C5.92239 37.7444 5.3 38.698 5.3 39.75V68.9H2.65C1.18655 68.9 0 70.0865 0 71.55V145.75V156.35C0 157.815 1.18655 159 2.65 159H156.35C157.815 159 159 157.815 159 156.35V145.75V82.15C159 80.6866 157.815 79.5 156.35 79.5ZM148.4 21.2V26.5H132.5V21.2H148.4ZM132.5 31.8H148.4V79.5H132.5V31.8ZM153.7 84.8V143.1H121.9V84.8H153.7ZM104.521 68.9H79.5V45.8031L104.521 68.9ZM70.0722 68.9H45.05V45.8031L70.0722 68.9ZM10.6 45.8031L35.6222 68.9H10.6V45.8031ZM5.3 74.2H116.6V82.15V143.1H92.75V113.95C92.75 112.485 91.5648 111.3 90.1 111.3H37.1C35.6366 111.3 34.45 112.485 34.45 113.95V143.1H5.3V74.2ZM39.75 127.2H87.45V132.5H39.75V127.2ZM87.45 121.9H39.75V116.6H87.45V121.9ZM39.75 137.8H87.45V143.1H39.75V137.8ZM153.7 153.7H5.3V148.4H37.1H90.1H119.25H153.7V153.7ZM129.85 137.8H145.75C147.215 137.8 148.4 136.615 148.4 135.15V119.25C148.4 117.785 147.215 116.6 145.75 116.6H129.85C128.385 116.6 127.2 117.785 127.2 119.25V135.15C127.2 136.615 128.385 137.8 129.85 137.8ZM132.5 121.9H143.1V132.5H132.5V121.9ZM129.85 111.3H145.75C147.215 111.3 148.4 110.115 148.4 108.65V92.75C148.4 91.2853 147.215 90.1 145.75 90.1H129.85C128.385 90.1 127.2 91.2853 127.2 92.75V108.65C127.2 110.115 128.385 111.3 129.85 111.3ZM132.5 95.4H143.1V106H132.5V95.4ZM71.55 15.9C71.55 14.4365 72.7365 13.25 74.2 13.25C77.5927 13.25 79.346 15.4432 80.5067 16.895C81.5626 18.2175 81.9287 18.55 82.6728 18.55C83.4181 18.55 83.783 18.2175 84.8388 16.895C85.9982 15.4432 87.7528 13.25 91.1455 13.25C94.5382 13.25 96.2928 15.4445 97.4548 16.8963C98.5107 18.2175 98.8755 18.55 99.6208 18.55C100.369 18.55 100.736 18.2175 101.797 16.8938C102.959 15.4432 104.716 13.25 108.112 13.25C111.507 13.25 113.262 15.4432 114.424 16.8938C115.485 18.2175 115.85 18.55 116.6 18.55C118.065 18.55 119.25 19.7365 119.25 21.2C119.25 22.6635 118.065 23.85 116.6 23.85C113.205 23.85 111.45 21.6568 110.288 20.2063C109.227 18.8825 108.862 18.55 108.112 18.55C107.361 18.55 106.994 18.8825 105.933 20.2075C104.771 21.6581 103.016 23.85 99.6208 23.85C96.2281 23.85 94.4761 21.6568 93.3142 20.205C92.2583 18.8825 91.8908 18.55 91.1455 18.55C90.4002 18.55 90.0353 18.8825 88.9794 20.205C87.8201 21.6568 86.0655 23.85 82.6728 23.85C79.28 23.85 77.5267 21.6568 76.3661 20.205C75.3102 18.8825 74.944 18.55 74.2 18.55C72.7365 18.55 71.55 17.3635 71.55 15.9ZM92.75 2.65C92.75 1.18655 93.9353 0 95.4 0C98.7927 0 100.547 2.19324 101.707 3.64504C102.763 4.96746 103.127 5.3 103.873 5.3C104.618 5.3 104.983 4.96746 106.039 3.64504C107.198 2.19324 108.953 0 112.346 0C115.738 0 117.493 2.19453 118.655 3.64634C119.711 4.96746 120.076 5.3 120.821 5.3C121.569 5.3 121.936 4.96746 122.997 3.64375C124.159 2.19324 125.916 0 129.312 0C132.707 0 134.462 2.19324 135.624 3.64375C136.685 4.96746 137.05 5.3 137.8 5.3C139.265 5.3 140.45 6.48655 140.45 7.95C140.45 9.41345 139.265 10.6 137.8 10.6C134.405 10.6 132.65 8.40676 131.488 6.95625C130.427 5.63254 130.062 5.3 129.312 5.3C128.561 5.3 128.194 5.63254 127.133 6.95754C125.971 8.40806 124.216 10.6 120.821 10.6C117.428 10.6 115.676 8.40676 114.514 6.95496C113.458 5.63254 113.091 5.3 112.346 5.3C111.6 5.3 111.235 5.63254 110.179 6.95496C109.02 8.40676 107.265 10.6 103.873 10.6C100.48 10.6 98.7254 8.40676 97.5661 6.95496C96.5102 5.63254 96.1453 5.3 95.4 5.3C93.9353 5.3 92.75 4.11345 92.75 2.65Z" fill="white"/>
               </svg>
-                 
-              <p >Leader en solutions de sécurité incendie industrielle</p>   
-            
+              <p >Leading the Way in Industrial Fire Safety Solutions</p>   
           </div>
  
 
           <div>
-            <h3 class="types-titres" >Gratte ciel</h3>
-            
+            <h3 class="types-titres" >High-Rise</h3>
             <svg width="158" height="158" viewBox="0 0 158 158" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.5555 81.925C15.9389 81.925 14.6295 80.6156 14.6295 78.9991C14.6295 77.3825 15.9389 76.0731 17.5555 76.0731H70.2218C71.8384 76.0731 73.1477 77.3825 73.1477 78.9991C73.1477 80.6156 71.8384 81.925 70.2218 81.925H17.5555ZM17.5555 58.5176H70.2218C71.8384 58.5176 73.1477 57.2082 73.1477 55.5917C73.1477 53.9751 71.8384 52.6657 70.2218 52.6657H17.5555C15.9389 52.6657 14.6295 53.9751 14.6295 55.5917C14.6295 57.2082 15.9389 58.5176 17.5555 58.5176ZM17.5555 35.1102H70.2218C71.8384 35.1102 73.1477 33.8008 73.1477 32.1842C73.1477 30.5677 71.8384 29.2583 70.2218 29.2583H17.5555C15.9389 29.2583 14.6295 30.5677 14.6295 32.1842C14.6295 33.8008 15.9389 35.1102 17.5555 35.1102ZM102.406 122.888H137.517C139.133 122.888 140.443 121.579 140.443 119.962C140.443 118.345 139.133 117.036 137.517 117.036H102.406C100.789 117.036 99.48 118.345 99.48 119.962C99.48 121.579 100.789 122.888 102.406 122.888ZM102.406 99.4805H137.517C139.133 99.4805 140.443 98.1712 140.443 96.5546C140.443 94.938 139.133 93.6287 137.517 93.6287H102.406C100.789 93.6287 99.48 94.938 99.48 96.5546C99.48 98.1712 100.789 99.4805 102.406 99.4805ZM102.406 76.0731H137.517C139.133 76.0731 140.443 74.7638 140.443 73.1472C140.443 71.5306 139.133 70.2213 137.517 70.2213H102.406C100.789 70.2213 99.48 71.5306 99.48 73.1472C99.48 74.7638 100.789 76.0731 102.406 76.0731ZM157.999 49.7407V155.074C157.999 156.691 156.69 158 155.073 158H2.92591C1.30935 158 0 156.691 0 155.074V2.92593C0 1.30935 1.30935 0 2.92591 0H84.8514C86.4679 0 87.7773 1.30935 87.7773 2.92593V46.8157H155.074C156.691 46.8157 157.999 48.1242 157.999 49.7407ZM5.85182 152.149H20.4814V108.259C20.4814 106.643 21.7907 105.333 23.4073 105.333H64.37C65.9866 105.333 67.2959 106.643 67.2959 108.259V152.149H81.9254V5.85279H5.85182V152.149ZM61.445 152.149V111.186H26.3341V152.149H61.445ZM152.149 52.6676H87.7791V152.149H152.149V52.6676Z" fill="white"/>
               </svg>
-              
-                 
-              <p >Pionnier des solutions de sécurité incendie pour les gratte-ciel</p>
-               
+              <p >Pioneering Fire Safety Solutions for High-Rise Buildings</p>      
           </div>
         </div>
 
@@ -180,12 +162,11 @@ import Btn from '../components/Btn.astro';
                 </svg>
                 </div>
            
-            <p >Stanex effectue des inspections de sécurité incendie conformes aux normes ULC-536. Notre équipe évalue soigneusement chaque composant de vos systèmes de protection incendie pour s'assurer qu'ils respectent ces exigences rigoureuses, garantissant ainsi leur fiabilité et leur bon fonctionnement.
+        
+            <p >Stanex provides expert fire safety inspections in compliance with ULC-536 standards. Our team thoroughly assesses every component of your fire protection systems to ensure they meet these rigorous requirements. This adherence guarantees your systems are reliable and fully operational, ensuring the safety of your property and occupants.
             </p>
-            <p >Nous savons combien la conformité ULC-536 est importante et nous nous efforçons d'identifier et de résoudre les problèmes potentiels avant qu'ils ne deviennent graves. Faites confiance à Stanex pour des inspections précises qui respectent les plus hauts standards de sécurité incendie et assurent un environnement sécurisé.
+            <p >We understand the importance of ULC-536 compliance and work diligently to identify and address potential issues before they escalate. Trust Stanex for precise and thorough inspections that uphold the highest fire safety standards and maintain a secure environment.
             </p>
-
-         
           </div>
           </div>
           <div class="ulc-537-bg">
@@ -197,12 +178,11 @@ import Btn from '../components/Btn.astro';
               </svg>
               </div>
          
-              <p >Stanex se spécialise dans les inspections et installations de sécurité incendie conformes aux normes ULC-537. Notre équipe gère expertement l'installation de nouveaux panneaux incendie, en veillant à ce qu'ils respectent les exigences rigoureuses de la norme ULC-537. Cet engagement garantit que vos nouveaux systèmes sont fiables et pleinement fonctionnels, offrant une protection optimale pour votre propriété et vos occupants.
+            
+              <p >Stanex specializes in fire safety inspections and installations in compliance with ULC-537 standards. Our team expertly handles the installation of new fire panels, ensuring they meet the rigorous requirements of ULC-537. This commitment guarantees that your new systems are reliable and fully functional, providing optimal protection for your property and occupants.
               </p>
-              <p >Conscients de l'importance de la conformité à la norme ULC-537, nous veillons à ce que chaque installation réponde à ces normes strictes. Faites confiance à Stanex pour des services d'installation précis et efficaces qui respectent les plus hauts standards de sécurité incendie et assurent un environnement sécurisé.
+              <p >Understanding the importance of ULC-537 compliance, we ensure every installation meets these exacting standards. Trust Stanex for precise and efficient installation services that uphold the highest fire safety norms and secure your environment.
               </p>
-  
-              
         </div>
         </div>
 
@@ -216,12 +196,12 @@ import Btn from '../components/Btn.astro';
             
             </div>
        
-            <p >Stanex fournit des solutions de sécurité incendie exceptionnelles conformes aux normes NFPA. Notre équipe est spécialisée dans l'installation et l'inspection des systèmes de protection incendie pour garantir qu'ils respectent les exigences rigoureuses établies par la National Fire Protection Association (NFPA). Cette conformité assure que vos systèmes sont fiables et offrent le plus haut niveau de protection pour votre propriété et ses occupants.
-            </p>
-            <p >Nous comprenons l'importance cruciale de la conformité aux normes NFPA et travaillons avec diligence pour maintenir ces standards élevés. Faites confiance à Stanex pour des services complets et précis qui respectent les normes NFPA et garantissent un environnement sécurisé.
-            </p>
+            
 
-           
+            <p >Stanex delivers exceptional fire safety solutions in line with NFPA standards. Our team is skilled in installing and inspecting fire protection systems to ensure they meet the rigorous requirements set by the National Fire Protection Association (NFPA). This adherence ensures your systems are reliable and provide the highest level of protection for your property and its occupants.
+            </p>
+            <p >We understand the critical importance of NFPA compliance and work diligently to maintain these high standards. Trust Stanex for thorough and precise services that uphold NFPA norms and guarantee a secure environment.
+            </p>
       </div>
       </div>
 
@@ -230,30 +210,29 @@ import Btn from '../components/Btn.astro';
       <section class="overlay-section-alarme-siemens">
         <div class="conteneur-siemens">
           <div class="conteneur-image-siemens">
-            <img src="/images/siemens.png">
+            <img src="/../../images/siemens.png">
           </div>
           <div class="conteneur-texte-siemens">
-            <h3 class="siemens-titre" >Fier distributeur de produits Siemens</h3>
-            
-            <p class="siemens-sous-titre" >Votre accès aux solutions de sécurité incendie de premier choix de Siemens</p>
-            
-            <p class="siemens-texte" >Stanex est fier d'être un distributeur officiel des produits de sécurité incendie Siemens, offrant une technologie de pointe et une fiabilité inégalée. Notre partenariat avec Siemens nous permet de fournir des solutions de protection incendie de la plus haute qualité, répondant aux normes les plus strictes en matière de sécurité et de performance. Que vous mettiez à niveau vos systèmes actuels ou installiez de nouveaux équipements, Stanex vous garantit les meilleurs produits Siemens accompagnés d'un soutien et d'un service expert.</p>
-            
-
-            <p  class="siemens-sous-titre siemens-margin-top">Année 2023 en chiffres</p>
            
+            <h3 class="siemens-titre" >Proud distributor of Siemens products</h3>
+            <p class="siemens-sous-titre" >Your Gateway to Siemens' Premier Fire Safety Solutions</p>
+            
+            <p class="siemens-texte" >Stanex is honored to be an official distributor of Siemens fire safety products, offering cutting-edge technology and unparalleled reliability. Our partnership with Siemens allows us to provide top-quality fire protection solutions that meet the highest standards of safety and performance. Whether you’re upgrading your current systems or installing new ones, Stanex ensures you receive the best Siemens products backed by expert support and service.</p>
+
+           
+            <p  class="siemens-sous-titre siemens-margin-top">Year 2023 numbers</p>
 
             <div class="conteneur-siemens-stats">
             <div class="siemens-stats">
-            <div  class="siemens-sous-titre" >40 Panneaux+</div>
-            <div class="siemens-stats-verbe" >Migrés</div>
            
+            <div  class="siemens-sous-titre" >40 Panels+</div>
+            <div class="siemens-stats-verbe" >Migrated</div>
             </div>
 
             <div class="siemens-stats">
-              <div  class="siemens-sous-titre" >1000 composantes</div>
-            <div class="siemens-stats-verbe" >Remplacées</div>
-           
+             
+            <div  class="siemens-sous-titre" >1000 components</div>
+            <div class="siemens-stats-verbe" >Replaced</div>
 
             </div>
           </div>

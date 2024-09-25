@@ -151,7 +151,7 @@
   cursor: pointer;
 }
 
-.langue {
+.langue:nth-child(3) {
   margin-right: auto;
 }
 

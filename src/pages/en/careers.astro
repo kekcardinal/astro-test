@@ -1,10 +1,10 @@
 ---
 // Import the layout
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Btn from '../components/Btn.astro';
-import Emplois from '../components/Emplois.astro';
-import { contentfulClient } from '../lib/contentful';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Btn from '../../components/Btn.astro';
+import Emplois from '../../components/Emplois.astro';
+import { contentfulClient } from '../../lib/contentful';
 import type { EntryFieldTypes } from 'contentful';
 
 interface Emplois {
@@ -73,7 +73,7 @@ const locale = lang === "fr" ? "fr-CA" : "en-US";
 
       <section class="overlay-section-emplois-page">
         <div class="nombres-des-postes" >
-          Poste(s) disponible(s) : <span class="jobCount"></span>
+          Available(s) career(s): <span class="jobCount"></span>
         </div>
 
         {emploisEn.length > 0 ? (

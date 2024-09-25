@@ -1,8 +1,8 @@
 ---
 // Import the layout
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Btn from '../components/Btn.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Btn from '../../components/Btn.astro';
 ---
 
 <!-- Use the layout and pass content into the slot -->
@@ -16,15 +16,13 @@ import Btn from '../components/Btn.astro';
 	lien="/projets/" />
 
     <section class="overlay-section">
-      <h1  class="titre-services">Nos services</h1>
-    
+      <h1  class="titre-services">Our services</h1>
       <article class="section-descriptions">
         <div class="service">
           <div class="conteneur-image-accueil">
             <img src="../images/fire-alarm.webp">
             <div class="texte-glass">
-              <h2 >Alarme incendie</h2>
-             
+              <h2 >Fire alarm</h2>
             </div>
             <div class="glass">
 
@@ -33,13 +31,13 @@ import Btn from '../components/Btn.astro';
            
           </div>
           <div class="accueil-description-texte">
-        
-          <p >Stanex, un vétéran de la sécurité incendie depuis 50 ans, excelle dans l'installation, la
-            maintenance et l'inspection des panneaux d'incendie et de leurs composants. Avec une réputation impeccable,
-            ils garantissent des solutions de sécurité incendie de haute qualité, protégeant ainsi les vies et les biens
-            avec expertise et dévouement.</p>
-          <a  class="lien_savoir_plus" href="alarme.html">En savoir plus</a>
+          <p >Stanex, a veteran in fire safety for 50 years, excels in installing, maintaining, and inspecting
+            fire
+            panels and components. With a sterling reputation, they ensure top-notch fire safety solutions, safeguarding
+            lives and properties with expertise and dedication.</p>
+
           
+          <a  class="lien_savoir_plus" href="alarme.html">More information</a>
           </div>
         </div>
 
@@ -47,21 +45,18 @@ import Btn from '../components/Btn.astro';
           <div class="conteneur-image-accueil">
             <img src="../images/server.webp">
             <div class="texte-glass">
-              <h2 >ASSC</h2>
-          
+              <h2 >UPS</h2>
             </div>
             <div class="glass">
             </div>
           </div>
           <div class="accueil-description-texte">
-          
+          <p >Stanex, a stalwart in UPS services for half a century, specializes in installation, maintenance,
+            and
+            inspections. Their expertise ensures seamless power solutions, safeguarding critical operations with
+            reliability and precision, making them a trusted name in the industry.</p>
 
-          <p >Stanex, un pilier des services d'onduleurs depuis un demi-siècle, se spécialise dans
-            l'installation, la maintenance et les inspections. Leur expertise garantit des solutions d'alimentation sans
-            faille, protégeant les opérations critiques avec fiabilité et précision, ce qui en fait un nom de confiance
-            dans l'industrie.</p>
-          <a  class="lien_savoir_plus" href="assc.html">En savoir plus</a>
-         
+          <a  class="lien_savoir_plus" href="assc.html">More information</a>
           </div>
         </div>
 
@@ -69,8 +64,8 @@ import Btn from '../components/Btn.astro';
           <div class="conteneur-image-accueil">
             <img src="../images/people2.webp">
             <div class="texte-glass">
-              <h2 >Autres services</h2>
-              
+    
+              <h2 >Other services</h2>
             </div>
             <div class="glass">
 
@@ -79,14 +74,14 @@ import Btn from '../components/Btn.astro';
            
           </div>
           <div class="accueil-description-texte">
-         
+          <p >Stanex offers bespoke services tailored to client needs, going beyond UPS and fire protection
+            expertise. From
+            specialized
+            consultations to customized solutions, they adapt swiftly, ensuring client satisfaction and comprehensive
+            support across diverse operational requirements.</p>
 
-          <p >Stanex propose des services sur mesure adaptés aux besoins des clients, allant au-delà de
-            l'expertise en onduleurs et de l'alarme incendie. Des consultations spécialisées aux solutions
-            personnalisées, ils s'adaptent
-            rapidement, garantissant la satisfaction du client et un soutien complet pour divers besoins opérationnels.</p>
-          <a  class="lien_savoir_plus" href="contact.html">En savoir plus</a>
-          
+         
+          <a  class="lien_savoir_plus" href="contact.html">More information</a>
           </div>
         </div>
   
@@ -98,18 +93,18 @@ import Btn from '../components/Btn.astro';
           <img class="image-histoire" src="../images/montreal.webp"></img>
         </div>
         <div class="conteneur-texte-histoire">
-          <h1  class="titre-services">Notre histoire</h1>
-        
+         
+          <h1  class="titre-services">Our history</h1>
+          <p  class="sous-titre-histoire">Over five decades, </p>
+          <p  class="texte-histoire">Stanex has established itself as a seasoned leader in UPS installation,
+            maintenance, and inspection, as well as in fire protection services. Their history illustrates remarkable
+            adaptability and customer-centric innovation. Evolving to meet client demands, they offer bespoke services,
+            solidifying their position as an industry stalwart.</p>
 
-          <p  class="sous-titre-histoire">Au cours de cinq décennies, </p>
-          <p  class="texte-histoire">Stanex s'est affirmé en tant que leader aguerri dans l'installation, la
-            maintenance et l'inspection des onduleurs, ainsi que dans les services de protection incendie. Leur histoire
-            illustre une adaptabilité remarquable et une innovation centrée sur le client. Évoluant pour répondre aux
-            demandes des clients, ils proposent des services sur mesure, consolidant ainsi leur position en tant que
-            pilier de l'industrie.</p>
+          
           <a href="a-propos.html" class="btn-emplois">
-            <p >À PROPOS</p>
-            
+           
+            <p >ABOUT US</p>
             <svg class="rotate-arrow" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M21.5 0C9.62583 0 0 9.62583 0 21.5C0 33.3741 9.62583 43 21.5 43C33.3742 43 43 33.3741 43 21.5C43 9.62583 33.3742 0 21.5 0ZM28.3587 16.4321V25.5286C28.3587 26.5181 27.5574 27.3203 26.5671 27.3203C25.5767 27.3203 24.7754 26.5181 24.7754 25.5286V20.7578L17.6997 27.8347C17.3498 28.1846 16.8914 28.3596 16.4329 28.3596C15.9745 28.3596 15.5161 28.1846 15.1662 27.8347C14.4663 27.1357 14.4663 26.001 15.1662 25.3012L22.2424 18.2237H17.4722C16.4819 18.2237 15.6806 17.4215 15.6806 16.4321C15.6806 15.4426 16.4819 14.6404 17.4722 14.6404H26.5671C26.8003 14.6404 27.0327 14.688 27.2516 14.7785C27.69 14.9602 28.039 15.3092 28.2206 15.7474C28.3112 15.9663 28.3587 16.1987 28.3587 16.4321C28.3587 16.4322 28.3587 16.432 28.3587 16.4321Z"
@@ -122,8 +117,8 @@ import Btn from '../components/Btn.astro';
 
     </section>
     <section class="overlay-section-stats">
-      <h1  class="titre-stats">Quelques chiffres</h1>
-    
+      
+      <h1  class="titre-stats">Some numbers</h1>
       <article class="conteneur-stats">
         <div class="conteneur-unit-stats">
           <svg class="stats-svg" width="76" height="75" viewBox="0 0 76 75" fill="none"
@@ -139,8 +134,8 @@ import Btn from '../components/Btn.astro';
             <path d="M22.7747 15.9688H20.1133V18.6302H22.7747V15.9688Z" fill="#EDEDED" />
           </svg>
           <h1 class="stats-titre">300+</h1>
-          <p  class="stats-description">projets accomplis par année</p>
-         
+          
+          <p  class="stats-description">accomplished projects every year</p>
         </div>
         <div class="conteneur-unit-stats">
           <svg class="stats-svg" width="113" height="66" viewBox="0 0 113 66" fill="none"
@@ -165,8 +160,8 @@ import Btn from '../components/Btn.astro';
               fill="#EDEDED" />
           </svg>
           <h1 class="stats-titre">1000+</h1>
-          <p  class="stats-description">clients satisfaits</p>
-          
+         
+          <p  class="stats-description">satisfied clients</p>
         </div>
         <div class="conteneur-unit-stats">
           <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,8 +194,8 @@ import Btn from '../components/Btn.astro';
               fill="#EDEDED" />
           </svg>
           <h1 class="stats-titre">500+</h1>
-          <p  class="stats-description">bâtiments protégés</p>
           
+          <p  class="stats-description">protected buildings</p>
         </div>
       </article>
     </section>
@@ -210,21 +205,20 @@ import Btn from '../components/Btn.astro';
       <article class="conteneur-emplois">
 
         <div class="conteneur-texte-emplois">
-          <h1  class="titre-services">Rejoignez l’équipe</h1>
           
+          <h1  class="titre-services">Join the team</h1>
+          <p  class="sous-titre-emplois">Embark on a journey of innovation and excellence with Stanex. </p>
+          <p  class="texte-emplois"> Join a renowned leader in UPS installation, maintenance, inspection, and
+            fire
+            protection
+            services. Join our team to be part of a dynamic environment where creativity thrives, opportunities abound,
+            and your skills are valued. Together, we shape the future of power solutions and fire safety, making a
+            meaningful impact on industries and communities worldwide. Join Stanex today and unleash your potential!</p>
 
-          <p  class="sous-titre-emplois">Lancez-vous dans un voyage d'innovation et d'excellence avec Stanex.
-          </p>
-          <p  class="texte-emplois">Rejoignez un leader renommé dans l'installation, la maintenance,
-            l'inspection des
-            onduleurs et les services de protection incendie. Rejoignez notre équipe pour faire partie d'un
-            environnement dynamique où la créativité prospère, les opportunités abondent et vos compétences sont
-            valorisées. Ensemble, nous façonnons l'avenir des solutions d'alimentation et de la sécurité incendie, ayant
-            un impact significatif sur les industries et les communautés du monde entier. Rejoignez Stanex dès
-            aujourd'hui et libérez votre potentiel !</p>
+          
           <a href="emplois.html" class="btn-emplois">
-            <p >EMPLOIS</p>
-            
+           
+            <p >CAREERS</p>
             <svg class="rotate-arrow" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M21.5 0C9.62583 0 0 9.62583 0 21.5C0 33.3741 9.62583 43 21.5 43C33.3742 43 43 33.3741 43 21.5C43 9.62583 33.3742 0 21.5 0ZM28.3587 16.4321V25.5286C28.3587 26.5181 27.5574 27.3203 26.5671 27.3203C25.5767 27.3203 24.7754 26.5181 24.7754 25.5286V20.7578L17.6997 27.8347C17.3498 28.1846 16.8914 28.3596 16.4329 28.3596C15.9745 28.3596 15.5161 28.1846 15.1662 27.8347C14.4663 27.1357 14.4663 26.001 15.1662 25.3012L22.2424 18.2237H17.4722C16.4819 18.2237 15.6806 17.4215 15.6806 16.4321C15.6806 15.4426 16.4819 14.6404 17.4722 14.6404H26.5671C26.8003 14.6404 27.0327 14.688 27.2516 14.7785C27.69 14.9602 28.039 15.3092 28.2206 15.7474C28.3112 15.9663 28.3587 16.1987 28.3587 16.4321C28.3587 16.4322 28.3587 16.432 28.3587 16.4321Z"

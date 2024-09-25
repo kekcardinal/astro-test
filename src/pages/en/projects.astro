@@ -1,12 +1,12 @@
 ---
 // Import the layout
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Btn from '../components/Btn.astro';
-import Projet from '../components/Projets.astro';
-import { contentfulClient } from '../lib/contentful';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Btn from '../../components/Btn.astro';
+import Projet from '../../components/Projets.astro';
+import { contentfulClient } from '../../lib/contentful';
 import type { EntryFieldTypes } from 'contentful';
-import Filtres from '../components/Filtres.astro'
+import Filtres from '../../components/Filtres.astro'
 
 interface Projet {
   contentTypeId: "projet",
@@ -114,10 +114,8 @@ const uniqueFiltresFR = Array.from(
 
 
     <section class="overlay-section-projets">
-        <h1 class="titre-projets">
-          Filtrez par type d’établissement
-        </h1>
-       
+        
+        <h1  class="titre-projets">Sort by building type</h1>
         <div class="conteneur-filtre">
             {uniqueFiltresEN.length > 0 ? (
               uniqueFiltresEN.map((filtre) => (

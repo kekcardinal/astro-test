@@ -1,4 +1,16 @@
-<li class="nav-premier langue">
-  <span class="choix_langue_en">EN</span>
-  <span class="choix_langue_fr">FR</span>
-</li>
+---
+import { languages } from '../../i18n/ui';
+import { getLangFromUrl, useTranslations, useTranslatedPath, getRouteFromUrl } from '../../i18n/utils';
+
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+---
+
+{Object.entries(languages).map(([lang, label]) => (
+  <li class="langue">
+    <a href={translatePath(`/${route ? route : ''}`, lang)}>{route}</a>
+  </li>
+))}
