@@ -1,12 +1,10 @@
 ---
-const { lang, index, href, text, currentPath } = Astro.props;
+const { lang, index, href, text, currentPath, isActive} = Astro.props;
 
 // Build the expected full URL for the nav item, including the language
 const expectedUrl = `${href}`;
-
-// Determine if the nav item is active by comparing the full URLs
-const isActive = `${currentPath}?lang=${lang}` === expectedUrl ? 'active-nav' : '';
+console.log("IS ACTIVE",isActive);
 ---
 <div lang={lang} data-index={index} class="nav-item">
-  <a class={isActive} href={href}>{text}</a>
+  <a  class={`${isActive ? 'active-onglet' : ''}`} href={href}>{text}</a>
 </div>

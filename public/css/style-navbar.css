@@ -116,6 +116,9 @@
   cursor: pointer;
 }
 
+.active-onglet{
+  color:white !important;
+}
 .active-lang > a{
   color:white !important;
   /* padding: 10px;
