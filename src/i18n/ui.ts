@@ -1,8 +1,9 @@
 export const showDefaultLang = false;
 
 export const languages = {
-    en: 'EN',
+
     fr: 'FR',
+    en: 'EN',
   };
   
   export const defaultLang = 'fr';
@@ -31,15 +32,6 @@ export const languages = {
 
 
   export const routes = {
-    en: {
-        'index': 'index',
-        'a-propos': 'about',
-        'alarme': 'alarm',
-        'assc': 'ups',
-        'contact':'contact',
-        'emplois':'careers',
-        'projets':'projects'
-    },
     fr: {
         'index': 'index',
         'a-propos': 'a-propos',
@@ -49,4 +41,14 @@ export const languages = {
         'emplois':'emplois',
         'projets':'projets'
     },
+    en: {
+        'index': 'index',
+        'a-propos': 'about',
+        'alarme': 'alarm',
+        'assc': 'ups',
+        'contact':'contact',
+        'emplois':'careers',
+        'projets':'projects'
+    },
+  
 }

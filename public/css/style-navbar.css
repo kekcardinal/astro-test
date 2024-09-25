@@ -12,10 +12,12 @@
 
 .nav li a {
   text-decoration: none;
+  color:rgb(163, 163, 163);
 }
 
 .langue {
   background-color: var(--palette_charcoal);
+
   /* padding-left: 25px; */
 }
 
@@ -114,12 +116,13 @@
   cursor: pointer;
 }
 
-.active {
-  padding: 10px;
+.active-lang > a{
+  color:white !important;
+  /* padding: 10px;
   border-style: solid;
   border-width: 2px;
   border-color: var(--palette_jaune);
-  border-radius: 25px;
+  border-radius: 25px; */
 }
 
 .active-nav {
