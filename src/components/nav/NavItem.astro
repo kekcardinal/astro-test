@@ -4,7 +4,12 @@ const { lang, index, href, text, currentPath, isActive} = Astro.props;
 // Build the expected full URL for the nav item, including the language
 const expectedUrl = `${href}`;
 console.log("IS ACTIVE",isActive);
+
+ // Get the current path
+console.log("CURRENT PATH",currentPath);
 ---
 <div lang={lang} data-index={index} class="nav-item">
-  <a  class={`${isActive ? 'active-onglet' : ''}`} href={href}>{text}</a>
+  <a  class={`${ Astro.url.pathname.includes(href) ? 'active-onglet' : ''}`} href={href}>{text}</a>
 </div>
+
+<!-- isActive={currentPath === translatePath('/alarme/')} -->

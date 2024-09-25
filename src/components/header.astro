@@ -12,6 +12,7 @@ const t = useTranslations(lang);
 
 
 const currentPath = Astro.url.pathname; // Get the current path
+console.log("CURRENT PATH",currentPath);
 ---
 
 <nav class="nav-wrapper">
@@ -62,22 +63,22 @@ const currentPath = Astro.url.pathname; // Get the current path
           </li>
           <LangageSwitcher />
     <li>
-      <NavItem isActive={currentPath === translatePath('/alarme/')} index="1" href={translatePath('/alarme/')} text={t('nav.alarme')} />
+      <NavItem index="1" href={translatePath('/alarme')} text={t('nav.alarme')} />
     </li>
     <li>
-      <NavItem isActive={currentPath === translatePath('/assc/') } index="2" href={translatePath('/assc/')} text={t('nav.assc')}/>
+      <NavItem index="2" href={translatePath('/assc')} text={t('nav.assc')}/>
     </li>
     <li>
-      <NavItem isActive={currentPath === translatePath('/projets/') } index="3" href={translatePath('/projets/')} text={t('nav.projets')}/>
+      <NavItem index="3" href={translatePath('/projets')} text={t('nav.projets')}/>
     </li>
     <li>
-      <NavItem isActive={currentPath === translatePath('/emplois/')} index="4" href={translatePath('/emplois/')} text={t('nav.emplois')} />
+      <NavItem index="4" href={translatePath('/emplois')} text={t('nav.emplois')} />
     </li>
     <li>
-      <NavItem isActive={currentPath === translatePath('/a-propos/') } index="5" href={translatePath('/a-propos/')} text={t('nav.a-propos')} />
+      <NavItem  index="5" href={translatePath('/a-propos')} text={t('nav.a-propos')} />
     </li>
     <li class="nav-dernier">
-      <NavItem  isActive={currentPath === translatePath('/contact/') } index="6" href={translatePath('/contact/')} text={t('nav.contact')} />
+      <NavItem index="6" href={translatePath('/contact')} text={t('nav.contact')} />
     </li>
         </ul>
       </div>
