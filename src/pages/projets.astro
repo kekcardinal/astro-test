@@ -50,16 +50,6 @@ const entries = await contentfulClient.withAllLocales.getEntries<{
   content_type: "projet",
 });
 
-const projectsEn = entries.items
-  .map(item => ({
-    titreProjet: item.fields["titreProjet"]["en-US"],
-    descriptionProjet: item.fields["descriptionProjet"]["en-US"],
-    imageProjet: item.fields["imageProjet"]["en-US"].fields.file["en-US"].url,
-    lang: "en",
-    category: item.fields["category"]["en-US"],
-  }))
-  .sort((a, b) => a.titreProjet.localeCompare(b.titreProjet));
-
   const projectsFr = entries.items
   .map(item => ({
     titreProjet: item.fields["titreProjet"]["fr-CA"],
@@ -70,14 +60,6 @@ const projectsEn = entries.items
   }))
   .sort((a, b) => a.titreProjet.localeCompare(b.titreProjet));
 
-  const filtresBtnEN = entries.items
-  .map(item => ({
-    lang: "en",
-    filtre: item.fields["category"]["en-US"],
-    category: item.fields["category"]["en-US"],
-  }))
-  .sort((a, b) => a.category.localeCompare(b.category));
-
 const filtresBtnFR = entries.items
   .map(item => ({
     lang: "fr",
@@ -85,12 +67,6 @@ const filtresBtnFR = entries.items
     category: item.fields["category"]["fr-CA"],
   }))
   .sort((a, b) => a.category.localeCompare(b.category));
-
-const uniqueFiltresEN = Array.from(
-  new Set(filtresBtnEN.map(filtre => filtre.category))
-).map(uniqueCategory => 
-  filtresBtnEN.find(filtre => filtre.category === uniqueCategory)
-);
 
 // Create unique French filters
 const uniqueFiltresFR = Array.from(
@@ -106,10 +82,8 @@ const uniqueFiltresFR = Array.from(
 <!-- Use the layout and pass content into the slot -->
 <BaseLayout mainClass="projets">
 	<Hero imageUrl="/../images/buildings/building.webp" altText="About Page Hero" 
-    texte_fr="Vous-aimeriez en faire partie?"
-    texte_en="You want to be a part of our projects?"
-    texte_btn_fr="Contactez-nous"
-    texte_btn_en="Contact-us"
+    texte="Vous-aimeriez en faire partie?"
+    texte_btn="Contactez-nous"
     lien="/contact/"/>
 
 
@@ -119,14 +93,6 @@ const uniqueFiltresFR = Array.from(
         </h1>
        
         <div class="conteneur-filtre">
-            {uniqueFiltresEN.length > 0 ? (
-              uniqueFiltresEN.map((filtre) => (
-                <Filtres {...filtre} />
-              ))
-            ) : (
-              <p>No projects found.</p>
-            )}
-
             {uniqueFiltresFR.length > 0 ? (
               uniqueFiltresFR.map((filtre) => (
                 <Filtres {...filtre} />
@@ -135,16 +101,6 @@ const uniqueFiltresFR = Array.from(
               <p>No projects found.</p>
             )}
         </div>
-
-        <article>
-          {projectsEn.length > 0 ? (
-            projectsEn.map((project) => (
-              <Projet {...project} />
-            ))
-          ) : (
-            <p>No projects found.</p>
-          )}
-        </article>
         
         <article>
           {projectsFr.length > 0 ? (

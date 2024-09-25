@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnFr = document.querySelector(".choix_langue_fr");
     const btnEn = document.querySelector(".choix_langue_en");
 
-    btnFr.addEventListener('click', function () {
-        document.documentElement.setAttribute('lang', 'fr'); // Set language to French
-        updateBuildings();
-    });
+    // btnFr.addEventListener('click', function () {
+    //     document.documentElement.setAttribute('lang', 'fr'); // Set language to French
+    //     updateBuildings();
+    // });
 
-    btnEn.addEventListener('click', function () {
-        document.documentElement.setAttribute('lang', 'en'); // Set language to English
-        updateBuildings();
-    });
+    // btnEn.addEventListener('click', function () {
+    //     document.documentElement.setAttribute('lang', 'en'); // Set language to English
+    //     updateBuildings();
+    // });
 
     let activeFilters = new Set();
 

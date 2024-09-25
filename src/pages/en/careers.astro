@@ -37,15 +37,6 @@ const emploisEn = entries.items
   }))
   .sort((a, b) => a.titreEmplois.localeCompare(b.titreEmplois));
 
-  const emploisFr = entries.items
-  .map(item => ({
-    titreEmplois: item.fields["titreEmplois"]["fr-CA"],
-    descriptionEmplois: item.fields["descriptionEmplois"]["fr-CA"],
-    tags: item.fields["tags"]["fr-CA"],
-    lang: "fr",
-  }))
-  .sort((a, b) => a.titreEmplois.localeCompare(b.titreEmplois));
-
 // Get the full URL from the `Astro.request.url`
 const currentUrl = new URL(Astro.request.url);
 console.log(currentUrl); // Debugging: Check the full URL
@@ -64,10 +55,8 @@ const locale = lang === "fr" ? "fr-CA" : "en-US";
 <!-- Use the layout and pass content into the slot -->
 <BaseLayout mainClass="emplois">
 	<Hero imageUrl="/../images/hero-construction.webp" altText="About Page Hero" 
-    texte_fr="Envi de rejoindre une équipe dynamique et bâtir ton avenir avec nous?"
-    texte_en="Want to join a dynamic team and build your future with us?"
-    texte_btn_fr="Contactez-nous"
-    texte_btn_en="Contact-us"
+    texte="Want to join a dynamic team and build your future with us?"
+    texte_btn="Contact-us"
     lien="/contact/"/>
 
 
@@ -78,18 +67,10 @@ const locale = lang === "fr" ? "fr-CA" : "en-US";
 
         {emploisEn.length > 0 ? (
           emploisEn.map((emplois) => (
-            <Emplois {...emplois} />
+            <Emplois {...emplois} texte_btn="Apply"/>
           ))
         ) : (
           <p>No careers available</p>
-        )}
-
-        {emploisFr.length > 0 ? (
-          emploisFr.map((emplois) => (
-            <Emplois {...emplois} />
-          ))
-        ) : (
-          <p>Aucun poste disponible</p>
         )}
                 
       </section>

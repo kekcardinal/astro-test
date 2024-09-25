@@ -1,14 +1,12 @@
 ---
-const { imageUrl, altText = 'Hero Image', texte_fr, texte_en, texte_btn_fr, texte_btn_en, fill, none, lien } = Astro.props;
+const { imageUrl, altText = 'Hero Image', texte, texte_btn, fill, none, lien } = Astro.props;
 import Btn from '../components/Btn.astro';
 ---
 
 <section class="hero">
       <img src={imageUrl} alt={altText}>
       <div>
-        <h1 lang="fr" class="hero-titre">{texte_fr}</h1>
-        <h1 lang="en" class="hero-titre">{texte_en}</h1>
-
-        <Btn lien_btn={lien} texte_fr={texte_btn_fr} texte_en={texte_btn_en} fill='#E6CA60' none={none} couleur_btn="border-btn-jaune"/>
+        <h1 class="hero-titre">{texte}</h1>
+        <Btn lien_btn={lien} texte={texte_btn} fill='#E6CA60' none={none} couleur_btn="border-btn-jaune"/>
     </div>
 </section>

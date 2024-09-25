@@ -2,11 +2,11 @@
 // ProjetItem.astro
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
-const { titreEmplois, descriptionEmplois, tags, lang} = Astro.props;
+const { titreEmplois, descriptionEmplois, tags, texte_btn} = Astro.props;
 ---
 
 
-<div class="projet building emplois-demander" lang={lang}>
+<div class="projet building emplois-demander">
     <div class="conteneur_checkbox_projet">
       <div class="button">
         <div class="titre-building">
@@ -34,16 +34,9 @@ const { titreEmplois, descriptionEmplois, tags, lang} = Astro.props;
 
           <a
             href="mailto:felixbcousineau@stanex.com"
-            lang="fr"
             class="emplois-appliquer"
-            >Appliquer</a
-          >
-          <a
-            href="mailto:felixbcousineau@stanex.com"
-            lang="en"
-            class="emplois-appliquer"
-            >Apply</a
-          >
+            >{texte_btn}</a>
+
         </div>
       </div>
     </div>

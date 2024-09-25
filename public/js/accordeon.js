@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const currentLang = document.documentElement.getAttribute('lang');
 
   // Select only the job elements that match the current language
-  const jobElements = document.querySelectorAll(`.projet.building.emplois-demander[lang="${currentLang}"]`);
+  const jobElements = document.querySelectorAll(`.projet.building.emplois-demander`);
   
   // Count the number of elements
   const jobCount = jobElements.length;

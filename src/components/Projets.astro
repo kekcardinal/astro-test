@@ -2,12 +2,12 @@
 // ProjetItem.astro
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
-const { titreProjet, descriptionProjet, imageProjet, lang, category } = Astro.props;
+const { titreProjet, descriptionProjet, imageProjet, category } = Astro.props;
 
 console.log("CATEGORY=",category);
 ---
 
-<div class="projet building" data-category={category} lang={lang} class="test">
+<div class="projet building" data-category={category} class="test">
     <div class="conteneur_checkbox_projet">
         <div class="button">
             <div class="titre-building">{titreProjet}</div>
