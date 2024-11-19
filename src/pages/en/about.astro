@@ -6,8 +6,28 @@ import Btn from '../../components/Btn.astro';
 ---
 
 <!-- Use the layout and pass content into the slot -->
-<BaseLayout mainClass="construction">
-	<Hero imageUrl="/../images/construction.webp" altText="About Page Hero" 
-    texte="Page is under construction."
+<BaseLayout mainClass="histoire">
+	<Hero imageUrl="/../images/history.webp" altText="About Page Hero" 
+    texte="Our history"
     none="bouton-est-invisible"/>
+
+
+    <section class="overlay-section-histoire">
+        <div class="overlay-section-histoire-container">
+            <div>
+            <h1>Our mission</h1>
+            <p>
+                Stanex, a company specializing in fire alarm systems and UPS solutions, is dedicated to protecting what matters most: your facilities, data, and safety. With decades of expertise, Stanex provides reliable installation, maintenance, and inspection services to ensure optimal performance and peace of mind.
+
+                Here’s a short message from our two associates, Jimmy Hatzis and Eddy Velosa:</p>
+            <p class="overlay-section-histoire-quote">
+                At Stanex, our priority has always been to provide dependable and tailored solutions. We take pride in safeguarding your facilities and ensuring the continuity of your operations through our fire alarm systems and UPS solutions. Thank you for your trust, which drives us to innovate and uphold excellence every day. </p>
+        </div>
+            <img src="/../../images/men1.webp">  <img src="/../../images/men2.webp">
+        </div>
+    </section>
+
+
+
+
 </BaseLayout>
