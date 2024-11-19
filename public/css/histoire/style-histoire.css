@@ -2,7 +2,7 @@
     margin-bottom: -50px;
 }
 
-.overlay-section-histoire {
+.overlay-section-page-histoire {
     position: relative;
     top: -50px;
   
@@ -13,56 +13,56 @@
 
 
   }
-  .overlay-section-histoire-container{
+  .overlay-section-page-histoire-container{
     display:flex;
   }
 
-  .overlay-section-histoire-container>img{
+  .overlay-section-page-histoire-container>img{
     max-width:400px;
     object-fit:cover;
   }
 
-  .overlay-section-histoire-container>img:first-of-type{
+  .overlay-section-page-histoire-container>img:first-of-type{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
   }
 
-  .overlay-section-histoire-container>img:last-of-type{
+  .overlay-section-page-histoire-container>img:last-of-type{
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
   }
-  .overlay-section-histoire-container>div>p, .overlay-section-histoire-container>div>h1{
+  .overlay-section-page-histoire-container>div>p, .overlay-section-page-histoire-container>div>h1{
 
     color:var(--palette_bleu);
   }
 
-  .overlay-section-histoire-container>div{
+  .overlay-section-page-histoire-container>div{
     padding-right:50px;
   }
 
   
-  .overlay-section-histoire-container>div>h1{
+  .overlay-section-page-histoire-container>div>h1{
  padding-bottom:25px;  }
 
- .overlay-section-histoire-quote{
+ .overlay-section-page-histoire-quote{
     margin-top:25px;
     font-style:italic;
     font-weight: 600;
  }
 
  @media screen and (max-width: 1200px) {
-    .overlay-section-histoire-container{
+    .overlay-section-page-histoire-container{
         display:flex;
         flex-direction:column;
       }
 
-      .overlay-section-histoire-container>img:first-of-type{
+      .overlay-section-page-histoire-container>img:first-of-type{
         border-radius:25px;
         margin-top:25px;
         margin-bottom:25px;
       }
     
-      .overlay-section-histoire-container>img:last-of-type{
+      .overlay-section-page-histoire-container>img:last-of-type{
         border-radius:25px;
       }
 
