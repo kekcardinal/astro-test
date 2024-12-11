@@ -1,70 +1,67 @@
-.histoire{
-    margin-bottom: -100px;
+.histoire {
+  margin-bottom: -100px;
 }
 
 .overlay-section-page-histoire {
-    position: relative;
-    top: -50px;
-  
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding:50px 50px 100px 50px;
-    background-color: var(--palette_gris);
+  position: relative;
+  top: -50px;
 
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 50px 50px 100px 50px;
+  background-color: var(--palette_gris);
+}
 
-  }
+.overlay-section-timeline {
+  position: relative;
+  top: -150px;
 
-  .overlay-section-timeline{
-    position:relative;
-    top:-150px;
-      
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding:50px 50px 100px 50px;
-    background-color: var(--palette_bleu);
-    min-height:100vh;
-  }
-  .overlay-section-page-histoire-container{
-    display:flex;
-  }
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 50px 50px 100px 50px;
+  background-color: var(--palette_bleu);
+  min-height: 100vh;
+}
+.overlay-section-page-histoire-container {
+  display: flex;
+}
 
-  .overlay-section-page-histoire-container>img{
-    max-width:400px;
-    object-fit:cover;
-  }
+.overlay-section-page-histoire-container > img {
+  max-width: 400px;
+  object-fit: cover;
+}
 
-  .overlay-section-page-histoire-container>img:first-of-type{
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-  }
+.overlay-section-page-histoire-container > img:first-of-type {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
 
-  .overlay-section-page-histoire-container>img:last-of-type{
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
-  .overlay-section-page-histoire-container>div>p, .overlay-section-page-histoire-container>div>h1{
+.overlay-section-page-histoire-container > img:last-of-type {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.overlay-section-page-histoire-container > div > p,
+.overlay-section-page-histoire-container > div > h1 {
+  color: var(--palette_bleu);
+}
 
-    color:var(--palette_bleu);
-  }
+.overlay-section-page-histoire-container > div {
+  padding-right: 50px;
+}
 
-  .overlay-section-page-histoire-container>div{
-    padding-right:50px;
-  }
+.overlay-section-page-histoire-container > div > h1 {
+  padding-bottom: 25px;
+}
 
-  
-  .overlay-section-page-histoire-container>div>h1{
- padding-bottom:25px;  }
+.overlay-section-page-histoire-quote {
+  margin-top: 25px;
+  font-style: italic;
+  font-weight: 600;
+}
 
- .overlay-section-page-histoire-quote{
-    margin-top:25px;
-    font-style:italic;
-    font-weight: 600;
- }
-
- .pad-bot{
+.pad-bot {
   /* padding-bottom:100px; */
- }
-
+}
 
 /* The timeline container */
 .timeline {
@@ -73,15 +70,15 @@
   align-items: center;
   position: relative;
   max-width: 1200px;
-  min-height:100vh;
+  min-height: 100vh;
   margin: 0 auto;
-/*   height: 100vh; /* Full viewport height */
+  /*   height: 100vh; /* Full viewport height */
   justify-content: space-between; /* Evenly space items */
 }
 
 /* The vertical timeline line */
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: white;
@@ -103,7 +100,7 @@
 
 /* Circles on the timeline */
 .container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -120,7 +117,7 @@
   width: 15px;
   height: 15px;
   border-width: 3px; /* Optionally, make the border thinner */
-  border-color:white;
+  border-color: white;
 }
 
 /* Special case: first circle */
@@ -137,11 +134,11 @@
 }
 
 /* Align content boxes */
-.content {
+.content-histoire {
   position: relative;
   color: white;
   padding: 10px 20px;
-  min-height:fit-content;
+  min-height: fit-content;
   width: 50%;
 }
 
@@ -165,19 +162,19 @@
   margin-right: 20px; /* Add spacing from the circle */
 }
 
- @media screen and (max-width: 1200px) {
-    .overlay-section-page-histoire-container{
-        display:flex;
-        flex-direction:column;
-      }
+@media screen and (max-width: 1200px) {
+  .overlay-section-page-histoire-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-      .overlay-section-page-histoire-container>img:first-of-type{
-        border-radius:25px;
-        margin-top:25px;
-        margin-bottom:25px;
-      }
-    
-      .overlay-section-page-histoire-container>img:last-of-type{
-        border-radius:25px;
-      }
- }
+  .overlay-section-page-histoire-container > img:first-of-type {
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .overlay-section-page-histoire-container > img:last-of-type {
+    border-radius: 25px;
+  }
+}

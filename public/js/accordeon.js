@@ -1,19 +1,23 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const currentLang = document.documentElement.getAttribute('lang');
+  const currentLang = document.documentElement.getAttribute("lang");
 
   // Select only the job elements that match the current language
-  const jobElements = document.querySelectorAll(`.projet.building.emplois-demander`);
-  
+  const jobElements = document.querySelectorAll(
+    `.projet.building.emplois-demander`
+  );
+
   // Count the number of elements
   const jobCount = jobElements.length;
-  
+
   // Insert the count into the <span> elements with class "jobCount"
   document.querySelectorAll(".jobCount").forEach((span) => {
     span.textContent = jobCount;
   });
-  
+
   const checkboxs = document.querySelectorAll(".state");
-  let conteneur_checkboxs = document.querySelectorAll(".conteneur_checkbox_projet");
+  let conteneur_checkboxs = document.querySelectorAll(
+    ".conteneur_checkbox_projet"
+  );
 
   let currentlyOpenContent = null;
 
@@ -39,8 +43,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Close the currently open content, if any
         if (currentlyOpenContent && currentlyOpenContent !== content) {
           currentlyOpenContent.style.maxHeight = "0";
-          currentlyOpenContent.previousElementSibling.querySelector(".state").checked = false;
-          currentlyOpenContent.previousElementSibling.querySelector(".symbole").textContent = "+";
+          currentlyOpenContent.previousElementSibling.querySelector(
+            ".state"
+          ).checked = false;
+          currentlyOpenContent.previousElementSibling.querySelector(
+            ".symbole"
+          ).textContent = "+";
         }
 
         // Open the new content
