@@ -42,7 +42,6 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: var(--palette_bleu);
 }
 
 h1,
@@ -70,8 +69,22 @@ h6 {
   font-size: var(--font_size_titre);
 }
 
+.background {
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  left: 0px; 
+  top: 0px; 
+  z-index: -1;
+
+  & > .stretch {
+    width:100%;
+    height:100%;
+  }
+}
+
 @media (min-width: 2000px) {
-  body {
+  main {
     max-width: 2000px;
     margin: 0 auto; /* Centers the content */
   }

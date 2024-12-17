@@ -1,4 +1,5 @@
 ---
+const { imageUrl, altText } = Astro.props;
 // Import the components
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
@@ -51,6 +52,9 @@ const currentPath = Astro.url.pathname;
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </head>
   <body>
+    <div class="background">
+      <img src={imageUrl} class="stretch" alt={altText} />
+    </div>
     <blogPost></blogPost>
     <!-- Use the Header component -->
     <Header currentPath={currentPath} />
