@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-
-
 :root {
   --font_primaire: "Arial", sans-serif;
   --font_secondaire: "Open Sans", sans-serif;
@@ -72,8 +70,8 @@ h6 {
 
 @media (min-width: 2000px) {
   body {
-    max-width: 2000px;
-    margin: 0 auto; /* Centers the content */
+    /* max-width: 2000px;
+    margin: 0 auto; Centers the content */
   }
 
   html {
