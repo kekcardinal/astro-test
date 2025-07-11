@@ -17,6 +17,7 @@ export const languages = {
         'nav.emplois':'Careers',
       'nav.home': 'index',
       'nav.projets':'Projects',
+      'nav.representants':'Sales Reps',
     
     },
     fr: {
@@ -27,6 +28,7 @@ export const languages = {
         'nav.emplois':'Emplois',
       'nav.home': 'Index',
       'nav.projets':'Projets',
+      'nav.representants':'Représentants',
     },
   } as const;
 
@@ -40,6 +42,7 @@ export const languages = {
         'contact':'contact',
         'emplois':'emplois',
         'projets':'projets'
+        'representants':'representants'
     },
     en: {
         'index': 'index',
@@ -49,6 +52,7 @@ export const languages = {
         'contact':'contact',
         'emplois':'careers',
         'projets':'projects'
+        'representants':'sales-representatives'
     },
   
 }

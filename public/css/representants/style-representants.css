@@ -1,0 +1,205 @@
+.representants {
+  margin-bottom: -50px;
+}
+
+.overlay-section-representants {
+  position: relative;
+  top: -50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 50px 50px 100px 50px;
+  background-color: var(--palette_gris);
+}
+
+.overlay-section-representants * {
+  color: var(--palette_bleu);
+}
+
+.titre-representants {
+  font-size: var(--font_size_titre);
+  font-family: var(--font_secondaire);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.conteneur-representants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.carte-representant {
+  background-color: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-representant:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.representant-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.representant-avatar {
+  margin-bottom: 20px;
+}
+
+.representant-details {
+  width: 100%;
+}
+
+.representant-nom {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--palette_bleu);
+}
+
+.representant-titre {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.representant-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+}
+
+.representant-specialites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.specialite {
+  background-color: var(--palette_jaune);
+  color: var(--palette_bleu);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-general {
+  background-color: var(--palette_bleu);
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-general * {
+  color: var(--palette_gris);
+}
+
+.contact-general h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.contact-general p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.contact-item-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-item-large:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 963px) {
+  .overlay-section-representants {
+    padding: 25px 25px 50px 25px;
+  }
+
+  .titre-representants {
+    font-size: var(--font_size_titre_mobile);
+    margin-bottom: 30px;
+  }
+
+  .conteneur-representants {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .carte-representant {
+    padding: 20px;
+  }
+
+  .representant-nom {
+    font-size: 20px;
+  }
+
+  .representant-titre {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .contact-general {
+    padding: 25px;
+  }
+
+  .contact-general h2 {
+    font-size: 22px;
+  }
+
+  .contact-general p {
+    font-size: 16px;
+  }
+
+  .contact-item-large {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .representant-info {
+    align-items: center;
+  }
+
+  .representant-contact {
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
